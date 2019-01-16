@@ -7,4 +7,6 @@ We'll fill in this space  soon to highlight more of our projects but here's a fe
 
 ### Supporters
 
-Our work is genererously supported by BrowserStack. 
+Our work is genererously supported by [BrowserStack](https://www.browserstack.com). 
+
+[![BrowserStack logo](browserstack-logo-600x315.png)](https:/www.browserstack.com)
