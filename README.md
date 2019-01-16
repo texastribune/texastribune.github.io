@@ -8,6 +8,15 @@ We'll fill in this space  soon to highlight more of our projects but here's a fe
 
 ### Supporters
 
-Our work is genererously supported by [BrowserStack](https://www.browserstack.com). 
+Our work is genererously supported by [BrowserStack](https://www.browserstack.com) and [Auth0](https://auth0.com). 
 
-[![BrowserStack logo](browserstack-logo-600x315.png)](https:/www.browserstack.com)
+<a href="https://www.auth0.com"><img src="a0-badge-dark.png" width="300"></a>
+
+<a href="https://www.browserstack.com"><img src="browserstack-logo-600x315.png" width="300"></a>
+
+<!--
+ [![Auth0 logo](a0-badge-dark.png?s=200)](https://www.auth0.com)
+-->
+<!--
+ [![BrowserStack logo](browserstack-logo-600x315.png?s=200)](https:/www.browserstack.com)
+-->
