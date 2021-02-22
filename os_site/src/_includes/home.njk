@@ -26,7 +26,7 @@ layout: base.njk
      </div>
      <div class="card-grid">
         {% for post in postslist %}
-            {{ postCard(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description, post.data.slug) }}
+            {{ postCard(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description, post.url) }}
         {% endfor %}
     </div>
 </main>

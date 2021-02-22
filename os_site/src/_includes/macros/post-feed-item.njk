@@ -1,27 +1,27 @@
 {% 
-  macro postFeed(
+  macro postFeedItem(
     title, 
     author,
     image_url, 
     image_alt,
     content, 
-    slug) 
+    url) 
 %}
 
 <li class="c-block-feed__item">
     <article class="c-story-block">
+        <figure>
+            <img class="l-display-block l-width-full" src="{{ image_url }}" alt="{{ image_alt }}">
+        </figure>
         <div class="c-story-block__text">
             <h3 class="c-story-block__headline t-serif t-lh-s t-lsp-s t-links-underlined-hover has-xxxs-btm-marg">
-                <a href="{{ slug }}" class="has-text-black-off"> {{ title }}</a>
+                <a href="{{ url }}" class="has-text-black-off"> {{ title }}</a>
             </h3>
             <p class="t-byline t-size-xs t-links t-lsp-m has-text-gray">
                 <span class="t-byline__item">by {{ author }}</a></span>
             </p>
-            <p class="post-list__excerpt">{{ content | excerpt | safe  }}</p>
+            <p class="post-feed__excerpt">{{ content | excerpt | safe  }}</p>
         </div>
-        <figure class="c-story-block__image-wrap">
-            <img class="l-display-block l-width-full" src="{{ image_url }}" alt="{{ image_alt }}">
-    </figure>
     </article>
 </li>
 

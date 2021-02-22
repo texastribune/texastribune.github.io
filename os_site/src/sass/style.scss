@@ -135,5 +135,15 @@ main {
     position:absolute;
     top:35%;
   }
+}
 
+.post-feed{
+  list-style-type: none;
+  padding-left:20%;
+  padding-right:20%;
+}
+
+.post-navigation a {
+  text-decoration:none;
+  color: $color-black-off;
 }
