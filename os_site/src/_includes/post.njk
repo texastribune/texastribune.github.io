@@ -6,7 +6,7 @@ layout: base.njk
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- if nextPost %}
 
-        <a class= "t-uppercase t-size-b" href="{{ nextPost.url | url }}">
+        <a class= "t-weight-bold t-size-b" href="{{ nextPost.url | url }}">
           <span>←</span>
           <span>Next Post</span>
         </a>
@@ -19,11 +19,11 @@ layout: base.njk
     <div class="post-content">
         <p> {{ content | safe }} </p>
     </div>
-    <nav class="t-links-underlined post-navigation">
+    <nav class="post-navigation t-links-underlined">
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if previousPost %}
 
-        <a class= "t-uppercase t-size-b" href="{{ previousPost.url | url }}">
+        <a class= "t-weight-bold t-size-b" href="{{ previousPost.url | url }}">
           <span>Previous Post</span>
           <span>→</span>
         </a>
