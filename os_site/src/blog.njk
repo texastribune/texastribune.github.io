@@ -1,0 +1,16 @@
+---
+layout: base.njk
+permalink: /posts/
+---
+
+{% from "macros/post-feed.njk" import postFeed %} 
+
+<main>
+    <h1> Posts </h1>
+    {% set postlist = collections.posts %}
+    <ul class="c-block-feed has-giant-btm-marg">
+        {% for post in postlist | reverse %}
+            {{ postFeed(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description,  post.data.slug) }}
+        {% endfor %}
+    </ul>
+</main>

@@ -1,0 +1,26 @@
+{% 
+  macro postCard(
+    title, 
+    author,
+    image_url, 
+    image_alt,
+    description, 
+    slug) 
+%}
+
+<div class="post-card is-rounded-b has-bg-white-off has-text-black-off t-align-center">
+    <p class= "t-links-underlined-hover t-weight-bold t-size-m">
+        <a href="{{ slug }}">{{ title }}</a>
+    </p>
+    <p class="t-byline t-links t-lsp-m t-size-xs has-text-gray-dark">
+            By {{ author }}
+    </p>
+    <div class="post-image"> 
+        <img src="{{ image_url }}" alt="{{ image_alt }}">
+    </div>
+</div>
+
+{% endmacro %}
+
+
+

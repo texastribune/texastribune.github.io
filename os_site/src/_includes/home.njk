@@ -1,0 +1,32 @@
+---
+layout: base.njk
+---
+
+{% from "macros/post-card.njk" import postCard %} 
+{% from "macros/project-card.njk" import projectCard %} 
+
+<main>
+    <div class="grid-label t-serif">
+        <h2>Our open source projects</h2>
+        <div class="has-notch  has-bg-yellow"></div>
+    </div>
+    <div class="card-grid__scrollable">
+        {% set projectslist = collections.projects%}
+        {% for project in projectslist %}
+            {{ projectCard(project.data.title, project.data.url, project.data.description) }}
+        {% endfor %}
+    </div>
+        
+        
+    <div class="grid-label t-serif">
+        {% set maxPosts = collections.posts.length | min(3) %}
+        <h2>From the blog</h2>
+        <div class="has-notch has-bg-yellow"></div>
+        {% set postslist = collections.posts | head(-3) | reverse%}
+     </div>
+     <div class="card-grid">
+        {% for post in postslist %}
+            {{ postCard(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description, post.data.slug) }}
+        {% endfor %}
+    </div>
+</main>

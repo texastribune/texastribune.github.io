@@ -1,0 +1,139 @@
+@import '../../node_modules/@texastribune/queso-ui/assets/scss/1-settings/all';
+@import '../../node_modules/@texastribune/queso-ui/assets/scss/2-tools/all';
+@import '../../node_modules/@texastribune/queso-ui/assets/scss/5-typography/all';
+@import '../../node_modules/@texastribune/queso-ui/assets/scss/6-components/button/button';
+@import '../../node_modules/@texastribune/queso-ui/assets/scss/utilities/all';
+
+.navbar {
+  margin-left:60%;
+  display:flex;
+  justify-content: space-around;
+}
+
+body {
+    font-family: $font-family-primary;
+}
+
+.header {
+    margin:auto;
+    display:flex;
+    justify-content:center;
+}
+
+.typewriter h1{
+    overflow: hidden;
+    border-right: $color-yellow-tribune;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: $font-letter-spacing-s;
+
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+  
+  /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+  
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color:$color-yellow-tribune }
+}
+  
+
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+
+    h2 {
+      padding-top:10px;
+    }
+}
+
+.page-container {
+  position:relative;
+  min-height:100vh;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.footer {
+  position: absolute;
+  left:0px;
+  bottom:0;
+  width:100%;
+  color: $color-white-off;
+}
+
+.card-grid {
+  display:inline-flex;
+  justify-content:center;
+  align-content: space-between;
+  margin-bottom:20px;
+  position:relative;
+  width:100%;
+
+  &__scrollable {
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+
+    .card {
+      flex: 0 0 auto;
+      position:relative;
+      display:inline-block;
+      flex-direction:column;
+      align-content:space-between;
+  
+      width:20%;
+      margin:15px;
+      padding:10px;
+
+      p.t-links-underlined a {
+        text-decoration:none;
+        color: $color-black-off;
+      }
+    }
+  }
+
+  .post-card {
+    position:relative;
+    height:200px;
+    width:25%;
+    margin:15px;
+    padding-bottom:40px;
+    padding-left:15px;
+    padding-right:15px;
+    background-color:$color-white-off;
+
+    &__more {
+      position:relative;
+    }
+
+    div.post-image>img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    p.t-links-underlined-hover a {
+      text-decoration:none;
+      color: $color-black-off;
+    }
+  }
+
+  a.section-head {
+    margin: auto;
+    color:$color-black-off;
+    text-decoration:none;
+    align-self:center;
+    position:absolute;
+    top:35%;
+  }
+
+}
