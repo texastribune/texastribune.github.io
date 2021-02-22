@@ -10,7 +10,7 @@ permalink: /posts/
     {% set postlist = collections.posts %}
     <ul class="c-block-feed has-giant-btm-marg">
         {% for post in postlist | reverse %}
-            {{ postFeed(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description,  post.data.slug) }}
+            {{ postFeed(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.templateContent,  post.data.slug) }}
         {% endfor %}
     </ul>
 </main>

@@ -4,7 +4,7 @@
     author,
     image_url, 
     image_alt,
-    description, 
+    content, 
     slug) 
 %}
 
@@ -17,6 +17,7 @@
             <p class="t-byline t-size-xs t-links t-lsp-m has-text-gray">
                 <span class="t-byline__item">by {{ author }}</a></span>
             </p>
+            <p class="post-list__excerpt">{{ content | excerpt | safe  }}</p>
         </div>
         <figure class="c-story-block__image-wrap">
             <img class="l-display-block l-width-full" src="{{ image_url }}" alt="{{ image_alt }}">
