@@ -8,17 +8,20 @@
     slug) 
 %}
 
-<li class="c-block-feed__item ">
-    <article class="c-story-block ">
-    <div class="c-story-block__text">
-        <h3 class="c-story-block__headline t-serif t-lh-s t-lsp-s t-links-underlined-hover has-xxxs-btm-marg">
-            <a href="{{ slug }}" class="has-text-black-off"> {{ title }}</a>
-        </h3>
-        <p class="t-byline t-size-xs t-links t-uppercase t-lsp-m has-text-gray has-b-btm-marg">
-            <span class="t-byline__item">by <a href="#">{{ author }}</a></span>
-        </p>
-        <p class="t-serif t-links t-size-s is-hidden-until-bp-s">{{ description }} </p> <a class="t-uppercase t-size-xxs t-lsp-m t-sans l-display-ib" href="#">Read the post<span class="c-icon c-icon--baseline"><svg aria-hidden="true"><use xlink:href="#long-arrow-right"></use></svg></span></a></p>
-    </div>
+<li class="c-block-feed__item">
+    <article class="c-story-block">
+        <div class="c-story-block__text">
+            <h3 class="c-story-block__headline t-serif t-lh-s t-lsp-s t-links-underlined-hover has-xxxs-btm-marg">
+                <a href="{{ slug }}" class="has-text-black-off"> {{ title }}</a>
+            </h3>
+            <p class="t-byline t-size-xs t-links t-lsp-m has-text-gray">
+                <span class="t-byline__item">by {{ author }}</a></span>
+            </p>
+        </div>
+        <figure class="c-story-block__image-wrap">
+            <img class="l-display-block l-width-full" src="{{ image_url }}" alt="{{ image_alt }}">
+    </figure>
+    </article>
 </li>
 
 {% endmacro %}
