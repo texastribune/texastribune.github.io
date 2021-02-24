@@ -112,13 +112,26 @@ main {
     padding-right:15px;
     background-color:$color-white-off;
 
+    flex: 0 0 auto;
+    position:relative;
+    display:inline-block;
+    flex-direction:column;
+    align-content:space-between;
+
     &__more {
       position:relative;
     }
 
-    div.post-image>img{
+    &__image {
+      height:100%;
+    }
+
+    &__image>img{
       max-width: 100%;
-      max-height: 100%;
+      max-height: 70%;
+      display: block;
+      margin:auto;
+      justify-content: center;
     }
 
     p.t-links-underlined-hover a {
