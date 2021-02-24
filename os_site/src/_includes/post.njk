@@ -2,32 +2,38 @@
 layout: base.njk
 ---
 <main>
-    <nav class="post-navigation t-links-underlined">
-      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {%- if nextPost %}
-
-        <a class= "t-weight-bold t-size-b" href="{{ nextPost.url | url }}">
-          <span>←</span>
-          <span>Next Post</span>
-        </a>
-
-      {% endif %}
-    </nav>
-    <div class="post-title">
+    <div class="post-title t-align-center t-serif">
         <h1>{{ title }}</h1>
     </div>
-    <div class="post-content">
+    <p class="post-author t-byline t-align-center has-text-gray-dark">
+      <span class="t-byline__item l-display-ib">By {{ author }}</span>
+      <time class="t-byline__item l-display-ib" datetime="2019-07-16 14:54:39.929-0400">July 16, 2019</time>
+    </p>
+    <div class="post-content has-xl-padding">
         <p> {{ content | safe }} </p>
     </div>
-    <nav class="post-navigation t-links-underlined">
-      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-      {%- if previousPost %}
+    <div class="post-nav-container">
+      <nav class="post-nav t-links-underlined">
+        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+        {%- if nextPost %}
 
-        <a class= "t-weight-bold t-size-b" href="{{ previousPost.url | url }}">
-          <span>Previous Post</span>
-          <span>→</span>
-        </a>
+          <a class= "t-weight-bold t-size-b" href="{{ nextPost.url | url }}">
+            <span>←</span>
+            <span>Next Post</span>
+          </a>
 
-      {% endif %}
-    </nav>
+        {% endif %}
+      </nav>
+      <nav class="post-nav t-links-underlined t-align-right">
+        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+        {%- if previousPost %}
+
+          <a class= "t-weight-bold t-size-b" href="{{ previousPost.url | url }}">
+            <span>Previous Post</span>
+            <span>→</span>
+          </a>
+
+        {% endif %}
+      </nav>
+    </div>
 </main>

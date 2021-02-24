@@ -6,3 +6,5 @@ image_alt: "Alt text of img #1"
 ---
 
 Content for my first post
+
+More content for my first post

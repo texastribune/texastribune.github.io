@@ -6,7 +6,6 @@ permalink: /posts/
 {% from "macros/post-feed-item.njk" import postFeedItem %} 
 
 <main>
-    <h1> Posts </h1>
     {% set postlist = collections.posts %}
     <ul class="post-feed c-block-feed has-giant-btm-marg">
         {% for post in postlist | reverse %}
