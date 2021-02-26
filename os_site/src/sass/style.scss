@@ -105,30 +105,21 @@ main {
     height:250px;
     width:25%;
     margin:15px;
-    padding-bottom:40px;
-    padding:15px;
-    background-color:$color-white-off;
-
-    flex: 0 0 auto;
-    position:relative;
-    display:inline-block;
+    padding:10px;
+    
+    display:flex;
     flex-direction:column;
-    align-content:space-between;
+    justify-content:space-around;
 
-    &__more {
-      position:relative;
-    }
-
-    &__image {
-      height:100%;
+    &__text {
+      padding:10px;
     }
 
     &__image>img{
       max-width: 100%;
-      max-height: 70%;
-      padding-top:10px;
+      max-height: 80%;
     }
-
+   
     p.t-links-underlined-hover a {
       text-decoration:none;
       color: $color-black-off;
@@ -149,7 +140,19 @@ main {
   list-style-type: none;
   padding-left:20%;
   padding-right:20%;
+
+  &__image {
+    width:50%;
+    float:left;
+    padding:10px;
+  }
+
+
+  &__excerpt {
+    padding-top:10px;
+  }
 }
+
 
 .post-nav-container {
   display:flex;

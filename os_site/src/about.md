@@ -3,8 +3,8 @@ layout: about.njk
 ---
 ## Team
 Info about the team!  
-
 <br></br>
+
 ## Supporters
 
 Our work is genererously supported by **[BrowserStack](https://www.browserstack.com)** and **[Auth0](https://auth0.com)**. BrowserStack helps us snuff out cross-browser issues before they reach the user. Additionally, the ability to test projects from `localhost` saves us lots of development time.

@@ -7,7 +7,7 @@ layout: base.njk
     </div>
     <p class="post-author t-byline t-align-center has-text-gray-dark">
       <span class="t-byline__item l-display-ib">By {{ author }}</span>
-      <time class="t-byline__item l-display-ib" datetime="2019-07-16 14:54:39.929-0400">July 16, 2019</time>
+      <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
     <div class="post-content has-xl-padding">
         <p> {{ content | safe }} </p>

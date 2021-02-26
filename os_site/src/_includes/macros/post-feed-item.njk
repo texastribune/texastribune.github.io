@@ -10,8 +10,8 @@
 
 <li class="c-block-feed__item">
     <article class="c-story-block">
-        <figure>
-            <img class="l-display-block l-width-full" src="{{ image_url | url}}" alt="{{ image_alt }}">
+        <figure class="post-feed__image">
+            <img class="l-display-block l-width-full" src="{{ image_url | url}}" alt="{{ image_alt }}" width="200">
         </figure>
         <div class="c-story-block__text">
             <h3 class="c-story-block__headline t-serif t-lh-s t-lsp-s t-links-underlined-hover has-xxxs-btm-marg">
@@ -20,7 +20,7 @@
             <p class="t-byline t-size-xs t-links t-lsp-m has-text-gray">
                 <span class="t-byline__item">by {{ author }}</a></span>
             </p>
-            <p class="post-feed__excerpt">{{ content | excerpt | safe  }}</p>
+            <p class="post-feed__excerpt t-size-xs">{{ content | excerpt | safe  }}</p>
         </div>
     </article>
 </li>
