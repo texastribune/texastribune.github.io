@@ -140,7 +140,6 @@ main {
     padding:10px;
   }
 
-
   &__excerpt {
     padding-top:10px;
   }
@@ -148,4 +147,17 @@ main {
 
 .post-title h1 {
   padding-bottom:10px;
+}
+
+.post-nav-container {
+  display:flex;
+
+  .post-nav {
+    flex: 1;
+
+    a {
+      text-decoration:none;
+      color: $color-black-off;
+    }
+  }
 }

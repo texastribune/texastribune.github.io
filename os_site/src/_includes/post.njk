@@ -14,26 +14,22 @@ layout: base.njk
         <p> {{ content | safe }} </p>
     </div>
   </article>
-  <nav aria-label="in page" class="post-nav-container">
-    <ul class="c-pagination t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold" aria-label="Pagination">
-      <li class="t-align-left">
+  <nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
+      <div class="post-nav">
         {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
         {%- if nextPost %}
           <a href="{{ nextPost.url | url }}">
-            <span>←</span>
-            <span>Next Post</span>
+            <p class="has-text-teal">← Next Post</p>
           </a>
         {% endif %}
-      </li>
-      <li class="t-align-right">
+      </div>
+      <div class="post-nav">
         {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
         {%- if previousPost %}
-          <a class="t-align-right" href="{{ previousPost.url | url }}">
-            <span>Previous Post</span>
-            <span>→</span>
+          <a href="{{ previousPost.url | url }}">
+            <p class="has-text-teal">Previous Post →</p>
           </a>
         {% endif %}
-      </li>
-    </ul>
+      </div>
   </nav>
 </main>

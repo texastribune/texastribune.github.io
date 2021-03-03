@@ -1,10 +1,8 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { DateTime } = require('luxon');
 
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addNunjucksFilter('min', minFilter);
-    eleventyConfig.addNunjucksFilter('head', headFilter);
-    eleventyConfig.addNunjucksFilter('excerpt', excerptFilter);
 
     eleventyConfig.addFilter('readableDate', (dateString) => {
       let date = new Date(dateString)
