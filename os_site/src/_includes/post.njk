@@ -13,27 +13,25 @@ layout: base.njk
         <p> {{ content | safe }} </p>
     </div>
     <div class="post-nav-container">
-      <nav class="post-nav t-links-underlined">
-        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-        {%- if nextPost %}
-
-          <a class= "t-weight-bold t-size-b" href="{{ nextPost.url | url }}">
-            <span>←</span>
-            <span>Next Post</span>
-          </a>
-
-        {% endif %}
-      </nav>
-      <nav class="post-nav t-links-underlined t-align-right">
-        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-        {%- if previousPost %}
-
-          <a class= "t-weight-bold t-size-b" href="{{ previousPost.url | url }}">
-            <span>Previous Post</span>
-            <span>→</span>
-          </a>
-
-        {% endif %}
-      </nav>
+      <ul class="c-pagination t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold" aria-label="Pagination">
+        <li class="t-align-left">
+          {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+          {%- if nextPost %}
+            <a href="{{ nextPost.url | url }}">
+              <span>←</span>
+              <span>Next Post</span>
+            </a>
+          {% endif %}
+        </li>
+        <li class="t-align-right">
+            {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+            {%- if previousPost %}
+              <a class="t-align-right" href="{{ previousPost.url | url }}">
+                <span>Previous Post</span>
+                <span>→</span>
+              </a>
+            {% endif %}
+        </li>
+      </ul>
     </div>
 </main>

@@ -1,11 +1,10 @@
 ---
-title: "Summer 2021 Engineering Fellowships"
+title: "This is why we made a blog!"
 author: "Michelle Gan"
-image_url: "/images/default1.jpeg"
+image_url: "/images/default1.jpg"
 image_alt: "Alt text of img #1"
 date: '2020-02-23'
 ---
 
-The Tribune’s engineering team supports technology efforts across the organization, including the core website and content management system, membership services, platform integrations, and analytics products. We’re looking for a fellow to help expand on and integrate these tools and systems; the ideal candidate would have experience with JavaScript or Python, as well as a mix of experience with Git, web technologies/standards (HTML+CSS) and data processing/analysis.
 
-Specific projects will be informed by the skills and interests of the fellow, but themes might include work with automated testing and Continuous Integration, ETL processing, and site performance and accessibility standards. Fellows will participate in bi-weekly sprints, work directly with engineers, and collaborate with departments including editorial, art, membership and sponsorship.
+Content for my third post

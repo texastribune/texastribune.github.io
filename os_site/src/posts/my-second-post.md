@@ -1,8 +1,9 @@
 ---
 title: "my second post"
 author: "Ashley Hebler"
-image_url: "/images/default2.jpeg"
+image_url: "/images/default2.jpg"
 image_alt: "Alt text of img #2"
+date: '2020-02-25'
 ---
 
 Content for my second post
