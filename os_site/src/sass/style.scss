@@ -6,21 +6,23 @@
 @import '@texastribune/queso-ui/assets/scss/6-components/all';
 @import '@texastribune/queso-ui/assets/scss/utilities/all';
 
-.navbar {
-  margin-left:60%;
-  display:flex;
-  justify-content: space-around;
-}
-
 body {
     font-family: $font-family-primary;
 }
 
-.header {
+.header-banner {
     margin:auto;
     display:flex;
     justify-content:center;
     margin-bottom:40px;
+}
+
+footer {
+  position: absolute;
+  left:0px;
+  bottom:0;
+  width:100%;
+  color: $color-white-off;
 }
 
 .typewriter h1{
@@ -67,13 +69,6 @@ main {
   padding-bottom: 2.5rem;    /* Footer height */
 }
 
-.footer {
-  position: absolute;
-  left:0px;
-  bottom:0;
-  width:100%;
-  color: $color-white-off;
-}
 
 .card-grid {
   display: grid;

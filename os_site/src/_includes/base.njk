@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href={{ '/css/style.css' | url }}> </link>
-</head>
-<body class="{{ body_class }}">
-    <div class="page-container">
-        <div class="content-wrap">
-            {% include "_nav.njk" %}
-            {% include "_header.njk" %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="View open source projects developed by and read blog posts written by the Tribune's engineering team.">
+        <title>Texas Tribune Engineering Team Blog and Open Source Site</title>
+        <link rel="stylesheet" href={{ '/css/style.css' | url }}> </link>
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="content-wrap">
+                {% include "_header.njk" %}
 
-            {{ content | safe }}
+                {{ content | safe }}
+            </div>
+            {%include "_footer.njk"%}
         </div>
-        {%include "_footer.njk"%}
-    </div>
-</body>
+    </body>
 </html>

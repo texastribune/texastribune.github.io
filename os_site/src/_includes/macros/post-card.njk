@@ -9,17 +9,19 @@
 %}
 
 <div class="post-card is-rounded-b has-bg-white-off has-text-black-off t-align-center">
-    <div class="post-card__text">
-        <p class= "t-links-underlined-hover t-weight-bold t-size-m">
-            <a href="{{ url | url}}">{{ title }}</a>
-        </p>
-        <p class="t-byline t-links t-lsp-s t-size-xs has-text-gray-dark">
-                By {{ author }}
-        </p>
-    </div>
-    <div class="post-card__image">
-        <img src="{{ image_url | url}}" alt="{{ image_alt }}">
-    </div>
+    <article>
+        <div class="post-card__text">
+            <p class= "t-links-underlined-hover t-weight-bold t-size-m">
+                <a href="{{ url | url}}">{{ title }}</a>
+            </p>
+            <p class="t-byline t-links t-lsp-s t-size-xs has-text-gray-dark">
+                    By {{ author }}
+            </p>
+        </div>
+        <div class="post-card__image">
+            <img src="{{ image_url | url}}" alt="{{ image_alt }}">
+        </div>
+    </article>
 </div>
 
 {% endmacro %}
