@@ -6,5 +6,4 @@ image_alt: "Alt text of img #1"
 date: '2020-02-23'
 ---
 
-
-Content for my third post
+Content for my first post
