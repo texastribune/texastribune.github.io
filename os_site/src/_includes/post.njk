@@ -11,7 +11,7 @@ layout: base.njk
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
     <div class="post-content has-xl-padding">
-        <p> {{ content | safe }} </p>
+        {{ content | safe }}
     </div>
   </article>
   <nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">

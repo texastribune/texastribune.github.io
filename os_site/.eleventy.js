@@ -5,15 +5,16 @@ const { DateTime } = require('luxon');
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addFilter('readableDate', (dateString) => {
-      let date = new Date(dateString)
+      const date = new Date(dateString)
       return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
           'dd LLL yyyy'
       );
     });
 
     eleventyConfig.addFilter('excerpt', (post) => {
-        const content = post.replace(/(<([^>]+)>)/gi, '');
-        return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
+        const regex = '<*p[^>]*>(.*?)</p>';
+        const firstPar = post.match(regex)[1];
+        return firstPar.substr(0, firstPar.lastIndexOf(' ', 200)) + '...';
     });
 
     eleventyConfig.addFilter('head', (array, n) => {

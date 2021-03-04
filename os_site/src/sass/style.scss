@@ -69,16 +69,13 @@ main {
   padding-bottom: 2.5rem;    /* Footer height */
 }
 
-
 .card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   
   position:relative;
   width:100%;
   padding-bottom:50px;
   
-
   &__scrollable {
     display:flex;
     flex-wrap:nowrap;
@@ -97,6 +94,7 @@ main {
 
   .post-card {
     position:relative;
+    width:300px;
     margin:15px;
     padding:10px;
     
@@ -108,8 +106,15 @@ main {
       padding:10px;
     }
 
+    &__title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
     &__image>img{
-      padding:10px;
+      padding: 20px;
       max-width: 100%;
     }
    
@@ -117,15 +122,6 @@ main {
       text-decoration:none;
       color: $color-black-off;
     }
-  }
-
-  a.section-head {
-    margin: auto;
-    color:$color-black-off;
-    text-decoration:none;
-    align-self:center;
-    position:absolute;
-    top:35%;
   }
 }
 
@@ -140,8 +136,19 @@ main {
     padding:10px;
   }
 
+  &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
   &__excerpt {
     padding-top:10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
   }
 }
 
