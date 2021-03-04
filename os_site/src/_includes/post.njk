@@ -3,14 +3,17 @@ layout: base.njk
 ---
 <main>
   <article>
-    <div class="post-title t-align-center t-serif">
+    <div class="post__title t-align-center t-serif">
         <h1>{{ title }}</h1>
     </div>
-    <p class="post-author t-byline t-align-center has-text-gray">
+    <p class="t-byline t-align-center has-text-gray">
       <span class="t-byline__item l-display-ib">by {{ author }} </span>
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
-    <div class="post-content has-xl-padding t-serif">
+    <figure class="post__image">
+        <img src="{{ image_url | url}}" alt="{{ image_alt }}" >
+    </figure>
+    <div class="post__content has-xl-padding t-serif">
         {{ content | safe }}
     </div>
   </article>
