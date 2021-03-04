@@ -10,11 +10,12 @@ layout: base.njk
       <span class="t-byline__item l-display-ib">By {{ author }}</span>
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
-    <div class="post-content has-xl-padding">
+    <div class="post-content has-xl-padding t-serif">
         {{ content | safe }}
     </div>
   </article>
-  <nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
+</main>
+<nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
       <div class="post-nav">
         {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
         {%- if nextPost %}
@@ -32,4 +33,3 @@ layout: base.njk
         {% endif %}
       </div>
   </nav>
-</main>

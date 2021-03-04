@@ -27,6 +27,7 @@ footer {
 
 .typewriter h1{
     overflow: hidden;
+    padding-bottom:10px;
     border-right: $color-yellow-tribune;
     white-space: nowrap;
     margin: 0 auto;
@@ -135,14 +136,6 @@ main {
     float:left;
     padding:10px;
   }
-
-  &__title {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-
   &__excerpt {
     padding-top:10px;
     display: -webkit-box;
@@ -167,4 +160,9 @@ main {
       color: $color-black-off;
     }
   }
+}
+
+.post-content {
+  padding-left:10%;
+  padding-right:10%;
 }
