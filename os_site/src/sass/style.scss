@@ -22,7 +22,6 @@ footer {
   left:0px;
   bottom:0;
   width:100%;
-  color: $color-white-off;
 }
 
 .typewriter h1{
@@ -153,6 +152,7 @@ main {
   &__content{
     padding-left:10%;
     padding-right:10%;
+    padding-bottom:5%;
   }
 
   &__image>img {
@@ -175,3 +175,9 @@ main {
     }
   }
 }
+
+.about {
+  padding-left:10%;
+  padding-right:10%;
+}
+
