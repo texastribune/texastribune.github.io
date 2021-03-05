@@ -62,11 +62,15 @@ main {
 }
 
 .content-wrap {
-  padding-bottom: 100px;    /* Footer height */
+  padding-bottom: 70px;    /* Footer height */
 }
 
 footer {
-  height:100px;
+  height:70px;
+
+  .c-icon.c-icon--yellow>svg {
+    padding:10px
+  }
 }
 
 .card-grid {
