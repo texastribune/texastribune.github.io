@@ -88,12 +88,20 @@ footer {
 
   &__scrollable {
     display: flex;
+    justify-content:space-between;
     flex-wrap: nowrap;
     overflow-x: auto;
 
     .card {
       margin: 15px;
       padding: 15px;
+      width: 20%;
+
+      flex: 0 0 auto;
+      position:relative;
+      display:inline-block;
+      flex-direction:column;
+      align-content:space-between;
 
       p.t-links-underlined a {
         text-decoration: none;
@@ -136,7 +144,7 @@ footer {
 }
 
 .post-feed-title {
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
 .post-feed {
   list-style-type: none;

@@ -1,7 +1,9 @@
 ---
 layout: about.njk
 ---
+
 # About Us
+
 <br>
 Info about the team!  
 <br>
