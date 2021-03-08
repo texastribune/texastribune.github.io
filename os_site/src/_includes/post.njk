@@ -20,20 +20,20 @@ layout: base.njk
 </main>
 
 <nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
-      <div class="post-nav">
-        {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-        {%- if nextPost %}
-          <a href="{{ nextPost.url | url }}">
-            <p class="has-text-teal">← Next Post</p>
-          </a>
-        {% endif %}
-      </div>
-      <div class="post-nav">
-        {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-        {%- if previousPost %}
-          <a href="{{ previousPost.url | url }}">
-            <p class="has-text-teal">Previous Post →</p>
-          </a>
-        {% endif %}
-      </div>
-  </nav>
+  <div class="post-nav">
+    {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {%- if nextPost %}
+    <a href="{{ nextPost.url | url }}">
+      <p class="has-text-teal">← Next Post</p>
+    </a>
+    {% endif %}
+  </div>
+  <div class="post-nav">
+    {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {%- if previousPost %}
+      <a href="{{ previousPost.url | url }}">
+        <p class="has-text-teal">Previous Post →</p>
+      </a>
+    {% endif %}
+  </div>
+</nav>
