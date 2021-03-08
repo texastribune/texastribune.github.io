@@ -6,11 +6,15 @@
 @import "@texastribune/queso-ui/assets/scss/6-components/all";
 @import "@texastribune/queso-ui/assets/scss/utilities/all";
 
-.header-banner {
+.banner {
   margin: auto;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  .banner-items {
+    max-width: 30%;
+  }
 }
 
 footer {
@@ -131,6 +135,9 @@ footer {
   }
 }
 
+.post-feed-title {
+  padding-bottom:30px;
+}
 .post-feed {
   list-style-type: none;
   padding-left: 20%;
