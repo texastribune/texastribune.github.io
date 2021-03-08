@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Texas Tribune Engineering</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="48x48" href="https://www.texastribune.org/static/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.texastribune.org/static/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://www.texastribune.org/static/images/favicon-16x16.png">
         <link rel="apple-touch-icon" sizes="180x180" href="https://www.texastribune.org/static/images/apple-touch-icon.png">
-        <meta name="Description" content="View open source projects developed by and read blog posts written by the Tribune's engineering team.">
-        <title>Texas Tribune Engineering</title>
-        <link rel="stylesheet" href={{ '/css/style.css' | url }}> </link>
+        <meta name="Description" content="Open source projects and blog posts by the Texas Tribune's engineering team.">
+        <link rel="stylesheet" href={{ '/css/style.css' | url }}>
     </head>
     <body>
         <div class="page-container">
@@ -18,7 +18,7 @@
 
                 {{ content | safe }}
             </div>
-            {%include "_footer.njk"%}
+            {% include "_footer.njk" %}
         </div>
     </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 ---
+
 // Breakpoints
 $large-breakpoint: 64em;
 $medium-breakpoint: 42em;
@@ -26,9 +27,8 @@ $hr-border-color: #eff0f1;
 
 @import "{{ site.theme }}";
 
-
 .btn {
-    color: #000;
-    border-width: 3px;
-    font-weight: bold;
+  color: #000;
+  border-width: 3px;
+  font-weight: bold;
 }
