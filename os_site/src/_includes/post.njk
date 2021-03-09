@@ -19,7 +19,7 @@ layout: base.njk
   </article>
 </main>
 
-<nav aria-label="post" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
+<nav aria-label="pagination" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
   <div class="post-nav">
     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
     {%- if nextPost %}
