@@ -27,5 +27,13 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@texastribune/queso-ui": "^9.6.0",
     "typewriter-effect": "^2.17.0"
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   }
 }
