@@ -22,9 +22,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("min", (num, minimum) => {
     if (num < minimum) {
       return num;
-    } else {
-      return minimum;
     }
+    return minimum;
   });
 
   eleventyConfig.setTemplateFormats(["md", "njk", "jpg", "jpeg"]);

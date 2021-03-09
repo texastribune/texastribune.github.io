@@ -72,14 +72,6 @@ main {
   padding-bottom: 70px;
 }
 
-footer {
-  height: 70px;
-
-  .c-icon.c-icon--yellow > svg {
-    padding: 10px;
-  }
-}
-
 .card-grid {
   display: flex;
   position: relative;
@@ -146,6 +138,7 @@ footer {
 .post-feed-title {
   padding-bottom: 30px;
 }
+
 .post-feed {
   list-style-type: none;
   padding-left: 20%;
