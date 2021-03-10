@@ -47,8 +47,8 @@
 }
 
 main {
-  margin-left: 15%;
-  margin-right: 15%;
+  max-width:70%;
+  margin: auto;
 
   h2 {
     padding-bottom: 10px;
@@ -129,8 +129,8 @@ main {
 }
 
 .post-feed-container {
-  padding-left: 20%;
-  padding-right: 20%;
+  max-width:60%;
+  margin:auto;
 
   h1 {
     padding-bottom: 30px;
@@ -139,7 +139,7 @@ main {
 
 .post-feed {
   list-style-type: none;
-  
+
   &__image {
     width: 50%;
     float: left;
@@ -160,8 +160,8 @@ main {
   }
 
   &__content {
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width:80%;
+    margin:auto;
     padding-bottom: 5%;
   }
 
@@ -186,6 +186,6 @@ main {
 }
 
 .about {
-  padding-left: 10%;
-  padding-right: 10%;
+  max-width:80%;
+  margin:auto;
 }
