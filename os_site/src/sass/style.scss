@@ -128,15 +128,18 @@ main {
   }
 }
 
-.post-feed-title {
-  padding-bottom: 30px;
+.post-feed-container {
+  padding-left: 20%;
+  padding-right: 20%;
+
+  h1 {
+    padding-bottom: 30px;
+  }
 }
 
 .post-feed {
   list-style-type: none;
-  padding-left: 20%;
-  padding-right: 20%;
-
+  
   &__image {
     width: 50%;
     float: left;
