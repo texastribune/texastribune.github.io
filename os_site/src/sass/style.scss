@@ -22,20 +22,26 @@
     margin: auto;
 
     @include mq ($until: bp-xl) {
-      width:100%;
+      width:80%;
     }
   }
 }
 
-.typewriter h1 {
-  overflow: hidden;
-  padding-bottom: 10px;
-  border-right: $color-yellow-tribune;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: $font-letter-spacing-s;
+.typewriter {
+  h1 {
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-right: $color-yellow-tribune;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: $font-letter-spacing-s;
 
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+
+    @include mq ($until: bp-l) {
+      font-size: 28px;
+    }    
+  }
 }
 
 @keyframes typing {
@@ -75,17 +81,39 @@ main {
   padding-bottom: 70px;
 }
 
+.grid-label {
+  @include mq ($until: bp-l) {
+    max-width:70%;
+    margin:auto;
+  }
+}
+
 .card-grid {
   display: flex;
   position: relative;
   width: 100%;
   padding-bottom: 50px;
 
+  @include mq ($until: bp-l) {
+    display:grid;
+    grid-gap:20px;
+    padding-top: 10px;
+    justify-content:center;
+  }
+
   &__scrollable {
     display: flex;
     justify-content:space-between;
     flex-wrap: nowrap;
     overflow-x: auto;
+
+    @include mq ($until: bp-l) {
+      display:grid;
+      grid-template-columns: auto;
+      grid-gap:20px;
+      padding-top: 10px;
+      justify-content:center;
+    }
 
     .card {
       margin: 15px;
@@ -98,6 +126,10 @@ main {
       flex-direction:column;
       align-content:space-between;
 
+      @include mq ($until: bp-l) {
+        width:70%;
+        margin:auto;
+      }
       p.t-links-underlined a {
         text-decoration: none;
         color: $color-black-off;
@@ -118,6 +150,11 @@ main {
     flex-direction: column;
     justify-content: space-between;
 
+    @include mq ($until: bp-l) {
+      width:70%;
+      margin:auto;
+    }
+    
     &__title {
       display: -webkit-box;
       -webkit-box-orient: vertical;
