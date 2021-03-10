@@ -6,8 +6,6 @@
 @import "@texastribune/queso-ui/assets/scss/6-components/all";
 @import "@texastribune/queso-ui/assets/scss/utilities/all";
 
-//Breakpoints
-
 .banner {
   margin: auto;
   display: flex;
@@ -173,8 +171,6 @@ main {
   }
 }
 
-
-
 .post-feed-container {
   max-width:60%;
   margin:auto;
@@ -192,12 +188,17 @@ main {
     float: left;
     padding: 10px;
   }
+
   &__excerpt {
     padding-top: 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+
+    @include mq ($until: bp-l) {
+      display:none;
+    }
   }
 }
 
@@ -210,6 +211,11 @@ main {
     max-width:80%;
     margin:auto;
     padding-bottom: 5%;
+
+    @include mq ($until: bp-l) {
+      max-width:100%;
+      margin:auto;
+    }
   }
 
   &__image > img {
