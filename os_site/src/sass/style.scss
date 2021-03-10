@@ -6,6 +6,8 @@
 @import "@texastribune/queso-ui/assets/scss/6-components/all";
 @import "@texastribune/queso-ui/assets/scss/utilities/all";
 
+//Breakpoints
+
 .banner {
   margin: auto;
   display: flex;
@@ -13,7 +15,15 @@
   margin-bottom: 40px;
 
   .banner-items {
-    max-width: 30%;
+    .logo-container {
+      max-width:60%;
+      margin:auto;
+    }
+    margin: auto;
+
+    @include mq ($until: bp-xl) {
+      width:100%;
+    }
   }
 }
 
