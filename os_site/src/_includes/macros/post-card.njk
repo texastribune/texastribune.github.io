@@ -7,18 +7,19 @@
     description, 
     url) 
 %}
-
-<div class="post-card is-rounded-b has-bg-white-off has-text-black-off t-align-center">
-    <article>
-        <div class="post-card__text">
-            <p class="post-card__title t-links-underlined-hover t-weight-bold t-size-m">
-                <a href="{{ url | url}}">{{ title }}</a>
-            </p>
-        </div>
-        <div class="post-card__image">
-            <img src="{{ image_url | url}}" alt="{{ image_alt }}">
-        </div>
-    </article>
-</div>
+<a href="{{ url | url }}">
+    <div class="post-card hover is-rounded-b has-bg-white-off has-text-black-off t-align-center">
+        <article class="post-link-card l-pos-rel has-xs-padding">
+            <div class="post-card__text">
+                <p class="post-card__title t-weight-bold t-size-m">
+                    {{ title }}
+                </p>
+            </div>
+            <div class="post-card__image has-xs-padding">
+                <img src="{{ image_url | url}}" alt="{{ image_alt }}">
+            </div>
+        </article>
+    </div>
+</a>
 
 {% endmacro %}
