@@ -87,6 +87,7 @@ main {
   @include mq ($until: bp-l) {
     max-width:70%;
     margin:auto;
+    
   }
 }
 
@@ -118,7 +119,7 @@ main {
     }
 
     .card {
-      margin: 15px;
+      margin: 10px;
       padding: 10px;
       width: 20%;
 
@@ -127,6 +128,7 @@ main {
       display:inline-block;
       flex-direction:column;
       align-content:space-between;
+      overflow-x:hidden;
 
       @include mq ($until: bp-l) {
         width:70%;
@@ -195,6 +197,7 @@ main {
     width: 50%;
     float: left;
     padding: 10px;
+    
   }
 
   &__excerpt {
