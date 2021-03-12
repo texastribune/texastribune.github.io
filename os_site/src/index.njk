@@ -11,7 +11,7 @@ layout: base.njk
             <h2>Open source projects</h2>
             <div class="has-notch has-bg-yellow"></div>
         </div>
-        <div class="card-grid__scrollable">
+        <div class="card-grid">
             {% set projectslist = collections.projects%}
             {% for project in projectslist %}
                 {{ projectCard(project.data.title, project.data.url, project.data.description) }}

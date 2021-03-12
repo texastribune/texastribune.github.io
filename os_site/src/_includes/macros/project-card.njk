@@ -5,9 +5,10 @@
     description) 
 %}
 
-    <div class="card is-rounded-b has-bg-white-off has-text-black-off t-align-center">
-        <article>
-            <a href="{{ project_url }}"> <p class="t-size-m t-weight-bold has-s-padding">{{ title }}</p></a>
+<a href="{{project_url }}" class="link-container">
+    <div class="card is-rounded-b has-bg-white-off has-xs-padding has-text-black-off t-align-center">
+        <article class="has-xs-padding">
+            <p class="t-size-m t-weight-bold">{{ title }}</p>
             <div class="card__description">
                 <p class= "t-size-s"> 
                     {{ description }} 
@@ -15,5 +16,6 @@
             </div>
         </article>
     </div>
+</a>
 
 {% endmacro %}
