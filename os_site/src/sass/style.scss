@@ -88,10 +88,12 @@ main {
 }
 
 .grid-label {
+  a:hover {
+    color:$color-teal-gray;
+  }
   @include mq ($until: bp-l) {
     max-width:70%;
     margin:auto;
-    
   }
 }
 
