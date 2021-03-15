@@ -1,10 +1,10 @@
-@import "@texastribune/queso-ui/assets/scss/1-settings/all";
-@import "@texastribune/queso-ui/assets/scss/2-tools/all";
-@import "@texastribune/queso-ui/assets/scss/3-resets/all";
-@import "@texastribune/queso-ui/assets/scss/4-elements/all";
-@import "@texastribune/queso-ui/assets/scss/5-typography/all";
-@import "@texastribune/queso-ui/assets/scss/6-components/all";
-@import "@texastribune/queso-ui/assets/scss/utilities/all";
+@import '@texastribune/queso-ui/assets/scss/1-settings/all';
+@import '@texastribune/queso-ui/assets/scss/2-tools/all';
+@import '@texastribune/queso-ui/assets/scss/3-resets/all';
+@import '@texastribune/queso-ui/assets/scss/4-elements/all';
+@import '@texastribune/queso-ui/assets/scss/5-typography/all';
+@import '@texastribune/queso-ui/assets/scss/6-components/all';
+@import '@texastribune/queso-ui/assets/scss/utilities/all';
 
 .banner {
   margin: auto;
@@ -14,17 +14,17 @@
 
   .banner-items {
     .logo-container {
-      max-width:90%;
-      margin:auto;
+      max-width: 90%;
+      margin: auto;
 
-      @include mq ($until: bp-xl) {
-        max-width:55%;
+      @include mq($until: bp-xl) {
+        max-width: 55%;
       }
     }
     margin: auto;
 
-    @include mq ($until: bp-xl) {
-      width:80%;
+    @include mq($until: bp-xl) {
+      width: 80%;
     }
   }
 }
@@ -40,9 +40,9 @@
 
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 
-    @include mq ($until: bp-l) {
+    @include mq($until: bp-l) {
       font-size: 28px;
-    }    
+    }
   }
 }
 
@@ -65,7 +65,7 @@
 }
 
 main {
-  max-width:70%;
+  max-width: 70%;
   margin: auto;
 
   h2 {
@@ -85,57 +85,61 @@ main {
 
 .grid-label {
   a:hover {
-    color:$color-teal-gray;
+    color: $color-teal-gray;
   }
   h2 {
-    @include mq ($until: bp-l) {
-      padding-top:0px;
+    @include mq($until: bp-l) {
+      padding-top: 0px;
     }
   }
-  @include mq ($until: bp-l) {
-    max-width:70%;
-    margin:auto;
+  @include mq($until: bp-l) {
+    max-width: 70%;
+    margin: auto;
   }
 }
 
 .link-container {
-  text-align:center;
+  text-align: center;
 }
 .card-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   position: relative;
   width: 100%;
   padding-bottom: 30px;
 
-  @include mq ($until: bp-l) {
-    display:grid;
-    grid-gap:20px;
+  @include mq($until: bp-l) {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
     padding-top: 10px;
-    justify-content:center;
+    justify-content: center;
   }
 
   .card {
-      margin: 10px;
-      padding: 10px;
-      height: 85%;
+    margin: 10px;
+    padding: 10px;
+    height: 85%;
+    width: 90%;
 
-      display:inline-block;
+    display: inline-block;
 
-      flex-direction:column;
-      align-content:space-between;
+    flex-direction: column;
+    align-content: space-between;
 
-      @include mq ($until: bp-l) {
-        width:70%;
-        margin:auto;
-      }
-      p.t-links-underlined a {
-        text-decoration: none;
-        color: $color-black-off;
-      }
+    @include mq($until: bp-l) {
+      width: 70%;
+      margin: auto;
     }
+    p.t-links-underlined a {
+      text-decoration: none;
+      color: $color-black-off;
+    }
+  }
 
-  .card:hover, .post-card:hover {
-    box-shadow:1px 1px $color-gray-light;
+  .card:hover,
+  .post-card:hover {
+    box-shadow: 1px 1px $color-gray-light;
+    transition: box-shadow 0.2s;
   }
 
   .post-card {
@@ -143,15 +147,11 @@ main {
     margin: 15px;
     padding: 10px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @include mq ($until: bp-l) {
-      width:70%;
-      margin:auto;
+    @include mq($until: bp-l) {
+      width: 70%;
+      margin: auto;
     }
-    
+
     &__title {
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -171,14 +171,13 @@ main {
 }
 
 .post-feed-container {
-  max-width:70%;
-  margin:auto;
+  max-width: 70%;
+  margin: auto;
 
-  @include mq ($until: bp-l) {
-    max-width:80%;
-    margin:auto;
+  @include mq($until: bp-l) {
+    max-width: 80%;
+    margin: auto;
   }
-  
 }
 
 .post-feed {
@@ -186,8 +185,8 @@ main {
 
   &__image {
     float: left;
-    >img {
-      width:100%;
+    > img {
+      width: 100%;
     }
   }
 
@@ -198,21 +197,21 @@ main {
     -webkit-line-clamp: 5;
     overflow: hidden;
 
-    @include mq ($until: bp-l) {
-      display:none;
+    @include mq($until: bp-l) {
+      display: none;
     }
   }
 }
 
 .post {
   &__content {
-    max-width:80%;
-    margin:auto;
+    max-width: 80%;
+    margin: auto;
     padding-bottom: 5%;
 
-    @include mq ($until: bp-l) {
-      max-width:100%;
-      margin:auto;
+    @include mq($until: bp-l) {
+      max-width: 100%;
+      margin: auto;
     }
   }
 
@@ -237,6 +236,6 @@ main {
 }
 
 .about {
-  max-width:80%;
-  margin:auto;
+  max-width: 80%;
+  margin: auto;
 }
