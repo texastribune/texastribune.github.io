@@ -1,7 +1,7 @@
 ---
 title: 'Summer 2021 Engineering Fellowship'
 author: 'Brandyn Friedly'
-image_url: '/images/default3.jpg'
+image_url: '/images/posts/cover3.jpg'
 image_alt: 'Alt text of img #3'
 date: '2020-02-28'
 ---
