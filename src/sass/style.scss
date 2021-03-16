@@ -13,7 +13,7 @@
 
   .banner-items {
     .logo-container {
-      max-width: 90%;
+      max-width: 30%;
       margin: auto;
 
       @include mq($until: bp-xl) {
