@@ -8,7 +8,6 @@
 
 .banner {
   margin: auto;
-  display: flex;
   justify-content: center;
   margin-bottom: 40px;
 
@@ -22,7 +21,6 @@
       }
     }
     margin: auto;
-
     @include mq($until: bp-xl) {
       width: 80%;
     }
