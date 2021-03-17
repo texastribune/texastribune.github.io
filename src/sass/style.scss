@@ -50,7 +50,9 @@ main {
 
 .content-wrap {
   padding-bottom: 70px;
+  min-height:calc(100vh - 100px);
 }
+
 
 .grid-label {
   a:hover {
@@ -71,13 +73,12 @@ main {
   text-align: center;
 }
 
-
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom:30px;
 
   @include mq($until: bp-l) {
     grid-template-columns: 1fr 1fr;
@@ -92,8 +93,6 @@ main {
     padding-top: 10px;
     justify-content: center;
   }
-
-  
 
   .card {
     margin: 10px;
