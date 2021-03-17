@@ -2,8 +2,8 @@
 layout: base.njk
 ---
 
-{% from "macros/post-card.njk" import postCard %} 
-{% from "macros/project-card.njk" import projectCard %} 
+{% from "macros/post-card.njk" import postCard %}
+{% from "macros/project-card.njk" import projectCard %}
 
 <main>
     <section>
@@ -18,7 +18,7 @@ layout: base.njk
             {% endfor %}
         </div>
     </section>
-    
+
     <section>
         <div class="grid-label t-serif">
             <a href="/posts/"> <h2>Latest from the blog</h2></a>
@@ -27,7 +27,7 @@ layout: base.njk
         <div class="card-grid">
             {% set maxPosts = collections.posts.length | min(3) %}
             {% set postslist = collections.posts | head(-maxPosts) | reverse %}
-            
+
             {% for post in postslist %}
                 {{ postCard(post.data.title, post.data.author, post.data.image_url, post.data.image_alt, post.data.description, post.url, post.templateContent) }}
             {% endfor %}
