@@ -9,7 +9,7 @@ layout: base.njk
     <section>
         <div class="grid-label t-serif">
             <a href="https://github.com/texastribune"><h2>Open source projects</h2></a>
-            <div class="has-notch has-bg-yellow"></div>
+            <div class="has-notch has-bg-yellow has-s-btm-marg"></div>
         </div>
         <div class="card-grid">
             {% set projectslist = collections.projects%}
@@ -22,9 +22,9 @@ layout: base.njk
     <section>
         <div class="grid-label t-serif">
             <a href="/posts/"> <h2>Latest from the blog</h2></a>
-            <div class="has-notch has-bg-yellow"></div>
+            <div class="has-notch has-bg-yellow has-s-btm-marg"></div>
         </div>
-        <div class="card-grid">
+        <div class="card-grid blog">
             {% set maxPosts = collections.posts.length | min(3) %}
             {% set postslist = collections.posts | head(-maxPosts) | reverse %}
             

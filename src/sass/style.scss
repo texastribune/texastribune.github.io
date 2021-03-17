@@ -27,13 +27,8 @@
   }
 }
 
-.footer-bottom {
-  left:0;
-  bottom:0;
-}
-
 #typewriter {
-  font-size:24px;
+  font-size:22px;
   padding-bottom:10px;
   font-family: $font-family-primary;
 }
@@ -75,6 +70,8 @@ main {
 .link-container {
   text-align: center;
 }
+
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -83,26 +80,34 @@ main {
   padding-bottom: 30px;
 
   @include mq($until: bp-l) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 10px;
+    justify-content: center;
+  }
+
+  @include mq($until: bp-m) {
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding-top: 10px;
     justify-content: center;
   }
 
+  
+
   .card {
     margin: 10px;
     padding: 10px;
     height: 85%;
     width: 90%;
+    margin:auto;
 
     display: inline-block;
-
     flex-direction: column;
     align-content: space-between;
-
-    @include mq($until: bp-l) {
+    
+    @include mq($until: bp-m) {
       width: 70%;
-      margin: auto;
     }
     p.t-links-underlined a {
       text-decoration: none;
@@ -120,10 +125,10 @@ main {
     width: 90%;
     margin: 15px;
     padding: 10px;
+    margin: auto;
 
-    @include mq($until: bp-l) {
+    @include mq($until: bp-m) {
       width: 70%;
-      margin: auto;
     }
 
     &__title {
