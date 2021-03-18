@@ -1,4 +1,5 @@
 const { DateTime } = require('luxon');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('readableDate', (dateString) => {
@@ -26,7 +27,18 @@ module.exports = function (eleventyConfig) {
     return minimum;
   });
 
-  eleventyConfig.setTemplateFormats(['md', 'njk', 'jpg', 'jpeg']);
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.setTemplateFormats([
+    'md',
+    'njk',
+    'jpg',
+    'jpeg',
+    'png',
+    'gif',
+    'webm',
+    'mp4',
+  ]);
 
   eleventyConfig.addWatchTarget('./src/sass/');
   eleventyConfig.addPassthroughCopy('./src/css');
