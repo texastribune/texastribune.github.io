@@ -5,7 +5,8 @@
     image_url, 
     image_alt,
     content, 
-    url) 
+    url,
+    description) 
 %}
 
 <li class="c-block-feed__item">
@@ -20,7 +21,7 @@
             <p class="t-byline t-size-xs t-lsp-m has-text-gray">
                 <span class="t-byline__item">by {{ author }}</span>
             </p>
-            <p class="post-feed__excerpt t-size-xs t-serif">{{ content | excerpt | safe  }}</p>
+            <p class="post-feed__excerpt t-size-xs t-serif">{{ content| excerpt | safe }}</p>
         </div>
     </article>
 </li>
