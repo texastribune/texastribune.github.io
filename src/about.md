@@ -2,11 +2,9 @@
 layout: about.njk
 ---
 
-# About Us
+## About Us
 
-<br>
-Info about the team!  
-<br>
+The Tribune’s engineering team supports technology efforts across the organization, including the core website and content management system, membership services, platform integrations, and analytics products. 
 
 ## Supporters
 
