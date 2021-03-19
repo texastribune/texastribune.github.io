@@ -172,10 +172,6 @@ main {
 
   &__excerpt {
     padding-top: 10px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
 
     @include mq($until: bp-l) {
       display: none;
