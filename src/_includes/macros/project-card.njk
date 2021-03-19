@@ -1,0 +1,21 @@
+{% 
+  macro projectCard(
+    title, 
+    project_url, 
+    description) 
+%}
+
+<a href="{{project_url }}" class="link-container">
+    <div class="card is-rounded-b has-bg-white-off has-xs-padding has-text-black-off t-align-center">
+        <article class="has-xs-padding">
+            <p class="t-size-m t-weight-bold">{{ title }}</p>
+            <div class="card__description">
+                <p class= "t-size-s has-s-btm-marg"> 
+                    {{ description }} 
+                </p>
+            </div>
+        </article>
+    </div>
+</a>
+
+{% endmacro %}

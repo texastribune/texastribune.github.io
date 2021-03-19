@@ -1,0 +1,29 @@
+{% 
+  macro postFeedItem(
+    title, 
+    author,
+    image_url, 
+    image_alt,
+    content, 
+    url,
+    description) 
+%}
+
+<li class="c-block-feed__item">
+    <article class="c-story-block">
+        <figure class="post-feed__image">
+            <img class="l-display-block l-width-full" src="{{ image_url | url}}" alt="{{ image_alt }}" width="200">
+        </figure>
+        <div class="c-story-block__text">
+            <h3 class="post-feed__title c-story-block__headline t-serif t-lh-s t-lsp-s t-links-underlined-hover has-xxxs-btm-marg">
+                <a href="{{ url | url}}" class="has-text-black-off"> {{ title }}</a>
+            </h3>
+            <p class="t-byline t-size-xs t-lsp-m has-text-gray">
+                <span class="t-byline__item">by {{ author }}</span>
+            </p>
+            <p class="post-feed__excerpt t-size-s t-serif">{{ description }}</p>
+        </div>
+    </article>
+</li>
+
+{% endmacro %}

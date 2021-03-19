@@ -1,0 +1,45 @@
+---
+layout: base.njk
+---
+{% block extraCSS %}<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"{% endblock %}
+<main>
+  <article>
+    <h1 class="post__title t-serif t-size-xxl">{{ title }}</h1>
+    <div class="post__description">
+      <p class="has-vert-bar t-size-m has-text-yellow">
+      <span class="has-text-gray-dark">
+        {{description }}
+      </span>
+      </p>
+    </div>
+    <p class="post__byline t-byline has-text-gray">
+      <span class="t-byline__item l-display-ib">By {{ author }} </span>
+      <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
+    </p>
+    <figure class="post__image has-xxl-btm-marg">
+        <img src="{{ image_url | url}}" alt="{{ image_alt }}" >
+    </figure>
+    <div class="post__content c-story-body">
+        {{ content | safe }}
+    </div>
+  </article>
+</main>
+
+<nav aria-label="pagination" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
+  <div class="post-nav">
+    {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {%- if nextPost %}
+    <a href="{{ nextPost.url | url }}">
+      <p class="has-text-teal">← Next Post</p>
+    </a>
+    {% endif %}
+  </div>
+  <div class="post-nav">
+    {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {%- if previousPost %}
+      <a href="{{ previousPost.url | url }}">
+        <p class="has-text-teal">Previous Post →</p>
+      </a>
+    {% endif %}
+  </div>
+</nav>
