@@ -135,7 +135,7 @@ main {
     &__title {
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       overflow: hidden;
     }
 
@@ -219,7 +219,7 @@ main {
 
   &__title, &__description, &__byline {
     padding-bottom:20px;
-    width:60%;
+    width:50%;
     margin:auto;
 
     @include mq($until: bp-m) {
@@ -231,7 +231,7 @@ main {
     display: block;
     margin: auto;
     padding-top: 10px;
-    width: 60%;
+    width: 50%;
   }
 }
 
