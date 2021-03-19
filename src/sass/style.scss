@@ -205,7 +205,11 @@ main {
       font-size: $size-xs;
     }
   }
-
+  &__title, &__description, &__byline {
+    padding-bottom:20px;
+    width:60%;
+    margin:auto;
+  }
   &__image > img {
     display: block;
     margin: auto;

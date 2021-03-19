@@ -4,9 +4,16 @@ layout: base.njk
 {% block extraCSS %}<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"{% endblock %}
 <main>
   <article>
-    <h1 class="post__title t-align-center t-serif has-tiny-btm-marg">{{ title }}</h1>
-    <p class="t-byline t-align-center has-text-gray">
-      <span class="t-byline__item l-display-ib">by {{ author }} </span>
+    <h1 class="post__title t-serif t-size-xxl">{{ title }}</h1>
+    <div class="post__description">
+      <p class="has-vert-bar has-vert-bar--from-bp-s t-size-m has-text-yellow">
+      <span class="has-text-gray-dark">
+        {{description }}
+      </span>
+      </p>
+    </div>
+    <p class="post__byline t-byline has-text-gray">
+      <span class="t-byline__item l-display-ib">By {{ author }} </span>
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
     <figure class="post__image has-xxl-btm-marg">
