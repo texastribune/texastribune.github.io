@@ -78,17 +78,16 @@ main {
   position: relative;
   width: 100%;
   padding-bottom:30px;
+  grid-gap: 20px;
 
   @include mq($until: bp-l) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
     padding-top: 10px;
     justify-content: center;
   }
 
   @include mq($until: bp-m) {
     grid-template-columns: 1fr;
-    grid-gap: 20px;
     padding-top: 10px;
     justify-content: center;
   }
@@ -96,9 +95,9 @@ main {
   .card {
     margin: 10px;
     padding: 10px;
-    height: 85%;
+    height:100%;
     width: 90%;
-    margin:auto;
+    margin: auto;
 
     display: inline-block;
     flex-direction: column;
@@ -112,6 +111,7 @@ main {
       color: $color-black-off;
     }
   }
+
 
   .card:hover,
   .post-card:hover {
