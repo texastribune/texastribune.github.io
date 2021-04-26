@@ -1930,6 +1930,40 @@ details summary::marker {
   grid-template-columns: 1fr 5fr;
 }
 
+.l-container {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-container--xs {
+  max-width: 20rem;
+}
+
+.l-container--s {
+  max-width: 32.5rem;
+}
+
+.l-container--m {
+  max-width: 40.625rem;
+}
+
+.l-container--l {
+  max-width: 52.8125rem;
+}
+
+.l-container--xl {
+  max-width: 67.5rem;
+}
+
+.l-container--xxl {
+  max-width: 81.25rem;
+}
+
+.l-container--default {
+  max-width: 60rem;
+}
+
 .has-border {
   border: 1px solid #d0d0d0;
 }
@@ -2445,7 +2479,6 @@ details summary::marker {
 }
 
 main {
-  max-width: 70%;
   margin: auto;
 }
 main h2 {
