@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-{% block extraCSS %}<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet"{% endblock %}
+{% block extraCSS %}<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">{% endblock %}
 <main>
   <article>
     <h1 class="post__title t-serif t-size-xxl">{{ title }}</h1>
@@ -12,7 +12,7 @@ layout: base.njk
       </span>
       </p>
     </div>
-    <p class="post__byline t-byline has-text-gray">
+    <p class="post__byline t-byline has-text-gray-dark">
       <span class="t-byline__item l-display-ib">By {{ author }} </span>
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
