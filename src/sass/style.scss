@@ -4,6 +4,7 @@
 @import '@texastribune/queso-ui/assets/scss/4-elements/all';
 @import '@texastribune/queso-ui/assets/scss/5-typography/all';
 @import '@texastribune/queso-ui/assets/scss/6-components/all';
+@import '@texastribune/queso-ui/assets/scss/7-layout/container';
 @import '@texastribune/queso-ui/assets/scss/utilities/all';
 
 .banner {
@@ -34,7 +35,6 @@
 }
 
 main {
-  max-width: 70%;
   margin: auto;
 
   h2 {
@@ -102,7 +102,7 @@ main {
     display: inline-block;
     flex-direction: column;
     align-content: space-between;
-    
+
     @include mq($until: bp-m) {
       width: 70%;
     }
@@ -189,23 +189,23 @@ main {
       max-width: 90%;
       margin: auto;
     }
-  
+
     figure>img, video, .twitter-tweet {
       display:block;
       margin:auto;
       max-width:90%;
     }
-  
+
     figure>figcaption {
       padding: $size-xs;
       color: $color-gray-dark;
       font-size: $size-xs;
-      max-width: 41.5rem; 
+      max-width: 41.5rem;
       margin: auto;
     }
 
     pre {
-      max-width: 41.5rem; 
+      max-width: 41.5rem;
       margin: 0 auto !important;
       padding:$size-xs;
     }
