@@ -12,7 +12,7 @@ layout: base.njk
             <div class="has-notch has-bg-yellow has-s-btm-marg"></div>
         </div>
         <div class="card-grid">
-            {% set projectslist = collections.projects%}
+            {% set projectslist = collections.projectsAlpha %}
             {% for project in projectslist %}
                 {{ projectCard(project.data.title, project.data.url, project.data.description) }}
             {% endfor %}

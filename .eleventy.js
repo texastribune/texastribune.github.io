@@ -27,6 +27,19 @@ module.exports = function (eleventyConfig) {
     return minimum;
   });
 
+  // sort projects alphabetically
+  eleventyConfig.addCollection('projectsAlpha', function (collection) {
+    return collection
+      .getFilteredByGlob('src/projects/*.md')
+      .sort(function (a, b) {
+        let nameA = a.data.title.toUpperCase();
+        let nameB = b.data.title.toUpperCase();
+        if (nameA < nameB) return -1;
+        else if (nameA > nameB) return 1;
+        else return 0;
+      });
+  });
+
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.setTemplateFormats([
