@@ -2583,6 +2583,9 @@ main h2 {
 }
 .card-grid .post-card__image > img {
   max-width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: center 20%;
 }
 .card-grid .post-card p.t-links-underlined-hover a {
   text-decoration: none;
