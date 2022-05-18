@@ -141,6 +141,9 @@ main {
 
     &__image > img {
       max-width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center 20%;
     }
 
     p.t-links-underlined-hover a {
