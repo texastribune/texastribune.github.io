@@ -1,14 +1,13 @@
 ---
 layout: base.njk
 ---
-{% block extraCSS %}<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">{% endblock %}
 <main>
   <article>
     <h1 class="post__title t-serif t-size-xxl">{{ title }}</h1>
     <div class="post__description">
       <p class="has-vert-bar t-size-m has-text-yellow">
       <span class="has-text-gray-dark">
-        {{description }}
+        {{ description }}
       </span>
       </p>
     </div>
@@ -17,7 +16,7 @@ layout: base.njk
       <time class="t-byline__item l-display-ib"> {{ date | readableDate }}</time>
     </p>
     <figure class="post__image has-xxl-btm-marg">
-        <img src="{{ image_url | url}}" alt="{{ image_alt }}" >
+        <img src="{{ image_url | url }}" alt="{{ image_alt }}" >
     </figure>
     <div class="post__content c-story-body">
         {{ content | safe }}

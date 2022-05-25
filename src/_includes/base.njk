@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Texas Tribune Engineering</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name='robots' content='noindex,nofollow' />
+
+        {% set baseurl = "https://texastribune.github.io" %}
+        {% set hed = title or "Texas Tribune Engineering" %}
+        {% set dek = description or "Open source projects and blog posts by The Texas Tribune's engineering team." %}
+        {% set img = (image_url or "/images/posts/cover1.jpg") | url %} 
+        {% set alttext = image_alt or "The Texas Tribune logo on the side of a building" %}
+
+        <title>{{ hed }}</title>
+
+        <meta name="description" content="{{ dek }}" />
+
+        <meta property="og:title" content="{{ hed }}" />
+        <meta property="og:image" content="{{ baseurl }}{{ img }}" />
+        <meta property="og:url" content="{{ baseurl }}{{ page.url }}" />
+
+        <meta name="twitter:title" content="{{ hed }}" />
+        <meta name="twitter:image" content="{{ baseurl }}{{ img }}" />
+        <meta name="twitter:image:alt" content="{{ alttext }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <link rel="icon" type="image/png" sizes="48x48" href="https://www.texastribune.org/static/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.texastribune.org/static/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://www.texastribune.org/static/images/favicon-16x16.png">
         <link rel="apple-touch-icon" sizes="180x180" href="https://www.texastribune.org/static/images/apple-touch-icon.png">
-        <meta name="description" content="Open source projects and blog posts by The Texas Tribune's engineering team.">
-        <link rel="stylesheet" href={{ '/css/style.css' | url }}>
-        {% block extraCSS %}{% endblock %}
+        <link rel="stylesheet" href={{ '/css/style.css' | url }} />
+        {{ extra_css | safe if extra_css }}
     </head>
     <body>
         <div class="page-container">
