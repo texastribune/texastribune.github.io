@@ -2640,6 +2640,9 @@ main h2 {
   margin: auto;
   max-width: 90%;
 }
+.post__content figure > img, .post__content video {
+  box-shadow: 0px 0px 2px gray;
+}
 .post__content figure > figcaption {
   padding: 0.85rem;
   color: #4a4a4a;
