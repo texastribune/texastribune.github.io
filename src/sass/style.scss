@@ -202,6 +202,10 @@ main {
       max-width:90%;
     }
 
+    figure>img, video {
+      box-shadow: 0px 0px 2px gray;
+    }
+
     figure>figcaption {
       padding: $size-xs;
       color: $color-gray-dark;
