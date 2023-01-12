@@ -398,6 +398,32 @@ details summary::marker {
   margin-right: 1.1rem;
 }
 
+.t-copy {
+  font-family: "PT Serif", Georgia, serif;
+  line-height: 1.4;
+  margin: 1.1rem auto;
+  max-width: 41.5rem;
+}
+@media (max-width: 43.5em) {
+  .t-copy {
+    padding: 0 0.85rem;
+  }
+}
+.t-copy--level-2 {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+}
+.t-copy--level-3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+.t-copy--level-4 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.92rem;
+  margin-top: 1.75rem;
+}
+
 .t-headline {
   font-size: 1.75rem;
 }
@@ -1049,14 +1075,14 @@ details summary::marker {
 .c-list {
   padding-left: 1.1rem;
 }
-.c-list li {
+.c-list:not(ol) {
   list-style: disc;
 }
-.c-list li::marker {
-  color: #797979;
-}
-.c-list li:hover::marker {
+.c-list--hoverable li:hover::marker {
   color: #ffc200;
+}
+.c-list--indented {
+  padding-left: 3.5rem;
 }
 
 .c-loading {
@@ -1138,14 +1164,8 @@ details summary::marker {
   background-color: #fff;
   border-bottom: 1px solid #f3f3f3;
 }
-.c-navbar--light .c-icon {
-  color: #222;
-}
 .c-navbar--dark {
   background-color: #222;
-}
-.c-navbar--dark .c-icon {
-  color: #ffc200;
 }
 .c-navbar__top {
   flex: 0 1 100%;
@@ -1784,38 +1804,31 @@ details summary::marker {
   border-left: 1px solid #f3f3f3;
 }
 
-.c-tabs {
-  align-items: flex-end;
+.c-tabs__list {
+  border-bottom: 1px solid #d0d0d0;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  border-bottom: 5px solid #ffc200;
 }
-.c-tabs__tab--wide {
-  flex: 0 1 10rem;
+.c-tabs__tab {
+  color: currentColor;
+  padding-bottom: 0.85rem;
 }
-.c-tabs__link {
-  background-color: #222;
-  color: #fff;
-  display: block;
-  border-right: 2px solid #fff;
-  padding: 0.92rem;
-  text-align: center;
+.c-tabs__tab--active:after {
+  background-color: currentColor;
+  bottom: -2px;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
-.c-tabs__link--s {
-  padding: 0.55rem;
+.c-tabs__tab:focus {
+  outline: 2px solid inherit;
 }
-.c-tabs__link--active {
-  background-color: #ffc200;
-  color: #222;
-  font-weight: 700;
+.c-tabs__tab:not(:focus-visible) {
+  outline: none;
 }
-
-.c-tab-panes__pane {
-  display: none;
-}
-.c-tab-panes__pane--active {
-  display: block;
+.c-tabs__tab:focus-visible {
+  outline: 2px solid inherit;
 }
 
 .c-tag {
@@ -1966,6 +1979,11 @@ details summary::marker {
 
 .has-border {
   border: 1px solid #d0d0d0;
+}
+
+.has-featured-border {
+  border: 1px solid #d0d0d0;
+  border-top: 5px solid #ffc200;
 }
 
 .has-styled-border {
