@@ -12,7 +12,10 @@ Our work is genererously supported by **[BrowserStack](https://www.browserstack.
 <br><br>
 
 <a href="https://www.auth0.com"><img src="/images/sponsors/auth0.jpeg" width="200"></a>
+<br><br>
 
-<a href="https://www.browserstack.com"><img src="/images/sponsors/browserstack.jpeg" width="200"></a>
+<a href="https://www.browserstack.com"><img src="/images/sponsors/browserstack.png" width="200"></a>
+<br><br>
 
 <a href="https://uptimerobot.com/"><img src="/images/sponsors/uptime-robot.png" width="200"></a>
+<br><br>
