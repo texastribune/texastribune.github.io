@@ -121,7 +121,7 @@ main {
 
   .post-card {
     display:flex;
-    justify-content:space-between;
+    justify-content: center;
     width: 90%;
     height: 100%;
     margin: 15px;
@@ -141,7 +141,8 @@ main {
 
     &__image > img {
       max-width: 100%;
-      aspect-ratio: 3 / 2;
+      width: 175px;
+      height: 175px;
       object-fit: cover;
       object-position: center 20%;
     }
@@ -190,10 +191,42 @@ main {
     max-width: 60%;
     margin: auto;
     padding-bottom: 5%;
+    // optimize the text for readability
+    p {
+      font-size: 1.125rem; 
+      line-height: 1.75rem; 
+      margin-bottom: 0.875rem; 
+
+    }
+    
+    h2 {
+      font-size: 1.625rem; 
+      line-height: 2rem; 
+    }
+    
+    h3 {
+      font-size: 1.375rem; 
+      line-height: 1.75rem; 
+    }
+    
 
     @include mq($until: bp-l) {
       max-width: 90%;
       margin: auto;
+      p {
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+        margin-bottom: 0.78125rem;
+      }
+
+      h2 {
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+      }
+      h3 {
+        font-size: 1.375rem;
+        line-height: 1.625rem;
+      }
     }
 
     figure>img, video, .twitter-tweet {
@@ -222,8 +255,11 @@ main {
   }
 
   &__title {
+    font-size: 2.5rem;
+    line-height: 2.875rem;
     @include mq($until: bp-m) {
-      font-size:$size-l;
+      font-size: 1.9375rem;
+      line-height: 2.25rem;
     }
   }
 
