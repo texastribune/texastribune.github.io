@@ -2581,7 +2581,7 @@ main h2 {
 }
 .card-grid .post-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 90%;
   height: 100%;
   margin: 15px;
@@ -2601,7 +2601,8 @@ main h2 {
 }
 .card-grid .post-card__image > img {
   max-width: 100%;
-  aspect-ratio: 3/2;
+  width: 175px;
+  height: 175px;
   object-fit: cover;
   object-position: center 20%;
 }
@@ -2647,10 +2648,36 @@ main h2 {
   margin: auto;
   padding-bottom: 5%;
 }
+.post__content p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.875rem;
+}
+.post__content h2 {
+  font-size: 1.625rem;
+  line-height: 2rem;
+}
+.post__content h3 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+}
 @media (max-width: 52.8025em) {
   .post__content {
     max-width: 90%;
     margin: auto;
+  }
+  .post__content p {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    margin-bottom: 0.78125rem;
+  }
+  .post__content h2 {
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+  }
+  .post__content h3 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 .post__content figure > img, .post__content video, .post__content .twitter-tweet {
@@ -2673,9 +2700,14 @@ main h2 {
   margin: 0 auto !important;
   padding: 0.85rem;
 }
+.post__title {
+  font-size: 2.5rem;
+  line-height: 2.875rem;
+}
 @media (max-width: 40.615em) {
   .post__title {
-    font-size: 1.5rem;
+    font-size: 1.9375rem;
+    line-height: 2.25rem;
   }
 }
 .post__title, .post__description, .post__byline {
