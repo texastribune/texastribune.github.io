@@ -1,5 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "blog"
+        "deps",
+        "styles"
     ]
 }
