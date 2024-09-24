@@ -33,4 +33,19 @@ layout: base.njk
             {% endfor %}
         </div>
     </section>
+
+    <section>
+        <div class="grid-label t-serif">
+            <a href="/engineering/"> <h2>Reflections from Engineering</h2></a>
+            <div class="has-notch has-bg-yellow has-s-btm-marg"></div>
+        </div>
+        <div class="card-grid">
+            {% set maxPosts = collections.eng_posts.length | min(1) %}
+            {% set postslist = collections.eng_posts | reverse %}
+
+            {% for post in postslist %}
+                {{ projectCard(post.data.title, post.url, post.data.description) }}
+            {% endfor %}
+        </div>
+    </section>
 </main>
