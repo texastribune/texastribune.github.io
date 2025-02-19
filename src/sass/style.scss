@@ -297,3 +297,12 @@ main {
   max-width: 80%;
   margin: auto;
 }
+
+details{
+  margin: auto;
+  max-width: 41.5rem;
+}
+
+details:hover {
+  cursor: pointer;
+}
