@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='robots' content='noindex,nofollow' />
+
+        
+        
+        
+         
+        
+
+        <title>School Vouchers Bot</title>
+
+        <meta name="description" content="School Voucher bot built on relevant news articles." />
+
+        <meta property="og:title" content="School Vouchers Bot" />
+        <meta property="og:description" content="School Voucher bot built on relevant news articles.">
+        <meta property="og:image" content="https://texastribune.github.io/images/posts/cover1.jpg" />
+        <meta name="og:image:alt" content="The Texas Tribune logo on the side of a building" />
+        <meta property="og:url" content="https://texastribune.github.io/eng_posts/2025-02-17/" />
+
+        <meta name="twitter:title" content="School Vouchers Bot" />
+        <meta property="twitter:description" content="School Voucher bot built on relevant news articles.">
+        <meta name="twitter:image" content="https://texastribune.github.io/images/posts/cover1.jpg" />
+        <meta name="twitter:image:alt" content="The Texas Tribune logo on the side of a building" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <link rel="icon" type="image/png" sizes="48x48" href="https://www.texastribune.org/static/images/favicon-48x48.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://www.texastribune.org/static/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://www.texastribune.org/static/images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.texastribune.org/static/images/apple-touch-icon.png">
+        <link rel="stylesheet" href=/css/style.css />
+        
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="content-wrap">
+                <header class= "has-bg-white-off">
+    <nav aria-label="primary" class="c-navbar c-navbar--dark has-bg-black-off">
+        <div class="c-navbar__top">
+            <div class="has-bg-black-off" style="width:70%"></div>
+            <div class="c-navbar__content c-navbar__content--home">
+                <ul class="c-navbar__items t-uppercase">
+                    <li class="c-navbar__item">
+                        <a class="c-navbar__item-content c-navbar__clickable c-navbar__clickable--animated  t-size-xxs" href="/">
+                            <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li class="c-navbar__item">
+                        <a class="c-navbar__item-content c-navbar__clickable c-navbar__clickable--animated  t-size-xxs" href="/about">
+                            <strong>About</strong>
+                        </a>
+                    </li>
+                    <li class="c-navbar__item">
+                        <a class="c-navbar__item-content c-navbar__clickable c-navbar__clickable--animated  t-size-xxs" href="/posts">
+                            <strong>Blog</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <a href="/">
+        <span class="is-sr-only">Homepage for The Texas Tribune's engineering team</span>
+        <div class="banner">
+            <div class="banner-items has-xl-padding t-align-center has-text-black-off t-lsp-m t-size-b">
+                <div class="logo-container">
+                    <svg aria-hidden="true" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 585.7 64.51'><path fill="#222" d='M84.94 10.23v45.85H74.63V10.23H64.49V1.16H95v9.07zM120.08 56.08V33.57h-11.46v22.51H98.39V1.16h10.23v23.25h11.46V1.16h10.31v54.92zM136.78 56.08V1.16H163V10h-16v13.59h11.05v8.08H147v15.26h16v9.15zM198.62 10.23v45.85h-10.31V10.23h-10.14V1.16h30.51v9.07zM213.1 56.08V1.16h26.23V10h-16v13.59h11v8.08h-11v15.26h16v9.15zM265.89 56.08l-6.44-19-7 19h-10l11.29-27.71-10.62-27.21h10.73l6 19 6.59-19h10.07l-11 26.39 11.05 28.53zM301.7 56.08l-1.81-10.8h-9.73l-2 10.8h-9.57l11.07-54.92h11.47l11 54.92zM295.27 16l-3.71 21.2h7zM328.66 57.32c-9.4 0-15.25-5.61-15.25-14.19v-3.79h9.4v3.22c0 4 1.9 6.26 5.61 6.26s5.44-2.14 5.44-5.52c0-4.37-2.8-7.34-8.25-11.38-5.6-4-11.71-9.49-11.71-17.15C313.9 6.85 319 0 328.91 0c8.66 0 14.43 5.94 14.43 14.1v3.55H334v-3.3c0-3.38-1.72-5.85-5.19-5.85a4.63 4.63 0 0 0-4.95 4.94c0 4.62 2.72 7 8.82 11.47 6.52 4.86 11.14 9.81 11.14 17.23.02 8.86-6.08 15.18-15.16 15.18zM377.84 10.23v45.85h-10.31V10.23h-10.15V1.16h30.52v9.07zM417.57 56.41c-4.05 0-5.61-3.3-5.61-8.08V38c0-2.56-1.32-4.7-4.21-4.7h-5.36v22.78h-10.22V1.16h16.9c7.51 0 12.54 4.29 12.54 12v7.76c0 4.12-1.9 7.17-6.19 8.49a8.42 8.42 0 0 1 6.35 8.33v10.01a7.69 7.69 0 0 0 2 5.61v3zm-5.94-42.88c0-2.48-1.07-4-3.63-4h-5.61v16.2h5.2c2.64 0 4-1.4 4-4.37zM429.8 56.08V1.16H440v54.92zM465.59 56.08h-17.32V1.16h17.16c7.5 0 12.12 4 12.12 11.62v5.94c0 4.7-1.81 8.25-6.51 9.24 4.95 1.32 6.76 4.7 6.76 9.32v7.17c0 7.67-4.7 11.63-12.21 11.63zm2.15-42.55c0-2.48-1.08-4-3.63-4h-5.53v15.13h5.12c2.63 0 4-1.4 4-4.29zm.16 23c0-2.89-1.4-4.37-4-4.37h-5.28v15.5h5.78c2.55 0 3.54-1.4 3.54-4zM499.34 57.32c-8.9 0-15.5-5.69-15.5-13.94V1.16h10.39v42.22c0 3.22 1.81 5 5.11 5s5.2-1.81 5.2-5V1.16h10v42.22c-.02 8.25-6.29 13.94-15.2 13.94zM544.66 56.08L534 32.66l-3.87-8.74v32.16h-9.4V1.16h8.82L539.71 25l3.63 8.74V1.16h9.24v54.92zM559.48 56.08V1.16h26.22V10h-16v13.59h11v8.08h-11v15.26h16v9.15z'/><path d='M0 .6v63.91l12.85-8h43V.6zm40 44.63l-12.22-8.06-12.24 8.06 3.88-14.13L8 22l14.63-.68 5.15-13.76L33 21.27l14.58.73-11.44 9.1z' fill='#ffc200'/></svg>
+                </div>
+                <div id="typewriter" class="t-sans" aria-hidden="true">
+                    <script src="/assets/main.js"></script>
+                    <noscript> &lt engineering / &gt </noscript>
+                </div>
+            </div>
+        </div>
+    </a>
+</header>
+
+
+                <main>
+  <article>
+    <h1 class="post__title t-serif t-size-xxl">School Vouchers Bot</h1>
+    <div class="post__description">
+      <p class="has-vert-bar t-size-m has-text-yellow">
+      <span class="has-text-gray-dark">
+        School Voucher bot built on relevant news articles.
+      </span>
+      </p>
+    </div>
+    <p class="post__byline t-byline has-text-gray-dark">
+      <span class="t-byline__item l-display-ib">By Suraj Thapa </span>
+      <time class="t-byline__item l-display-ib"> Feb 17, 2025</time>
+    </p>
+    <figure class="post__image has-xxl-btm-marg">
+        <img src="." alt="" >
+    </figure>
+    <div class="post__content c-story-body">
+        <h1>Introduction</h1>
+<p>The goal of this project was to integrate a school vouchers chatbot into a special report, marking our first public-facing, internally developed chatbot tool. To maintain journalistic integrity and prevent misinformation, we restricted the chatbot’s access to a curated set of vetted articles. By leveraging Retrieval-Augmented Generation (RAG) technique, the chatbot retrieves information only from pre-selected, published content, ensuring responses are fact-based and up to date while maintaining the integrity of our reporting and upholding the highest editorial standards.</p>
+<h2>Building the Chatbot</h2>
+<p>As of March 2024, <a href="https://arxiv.org/pdf/2312.10997">a survey paper</a> on RAG identifies three common approaches to building a Retrieval-Augmented Generation (RAG) application: Naive RAG, Advanced RAG, and Modular RAG. In the Naive RAG approach, relevant articles are fed into a large language model (LLM), which then generates responses. However, this method has significant drawbacks—it may fail to retrieve the most relevant information and is prone to hallucination. To address these issues, the Advanced RAG approach provides more control over how information is stored, retrieved, and processed. The Modular RAG was beyond what our project required. The Advanced RAG diagram below illustrates the data flow from storage to answer generation.</p>
+<figure>
+  <img src="/images/posts/voucher-bot-rag-arch.png" alt="AWS slackbot">
+  <figcaption>Advanced RAG</figcaption>
+</figure>
+Source: [Retrieval-Augmented Generation for Large Language Models: A Survey](https://arxiv.org/pdf/2312.10997)
+<h3>How is it built?</h3>
+<p>To make our chatbot accurate and efficient, we structured its data pipeline around tagged articles. Whenever a relevant article is tagged or updated, it is added to the bot’s knowledge base. To prioritize fresh information, we assign a recency score to each article, ensuring newer content is ranked higher. We store this data in a Weaviate vector database. To improve search accuracy, we break articles into small chunks and add context, making it easier for the chatbot to find the most relevant details.
+Before retrieving answers, we filter out harmful or inappropriate questions using OpenAI’s moderation API and refine user queries for better results. We used cohere to further re-rank retrieved data to prioritize the most useful article chunk. For generation, we use GPT-4.0, fine-tuned to focus on relevant content, avoid incorrect answers, and provide clear, well-cited responses. The frontend, built with Streamlit, ensures a smooth user experience with real-time streaming, citation visualization, and a user-friendly interface.</p>
+<h3>Technical explanation (optional)</h3>
+<details>
+  <summary>Click to open</summary>
+<h4>Data Engineering</h4>
+<p>We refined our data pipeline through multiple iterations, ultimately structuring it around tag-based ingestion. Whenever a relevant article is tagged, it is added to the bot’s knowledge base. Additionally, if an article is updated, the ingestion pipeline ensures the knowledge base reflects the latest version.
+To prioritize recent information, we assign a recency score to each article based on its publication date and related tags. Several approaches can be used for this, such as linear decay, exponential decay, and weighted decay, depending on how much importance you place on newer content.
+While we could calculate recency dynamically during retrieval, we opted to precompute it during ingestion. This reduces processing overhead when the chatbot is in use, ensuring faster response times.</p>
+<h4>Vector embeddings storage</h4>
+<p>After evaluating several storage solutions—including PostgresML and Postgres with pgvector—we chose Weaviate due to its widespread adoption and usability. Its <a href="https://weaviate.io/developers/weaviate/search/hybrid">hybrid search</a> capabilities significantly streamline retrieval optimization.</p>
+<h4>Chunking</h4>
+<p>Effective retrieval is critical for chatbot accuracy. If irrelevant data is fed into the response generation stage, it leads to incorrect answers. To improve retrieval, (a) we split text into small chunks for better search results and (b) each chunk is <a href="https://www.anthropic.com/news/contextual-retrieval">contextualized</a> by adding relevant metadata. Now that our data is ready, let's move on to the pre-retrieval stage.</p>
+<h4>Pre-retrieval</h4>
+<p>At this stage, we ensure that user queries are safe and well-structured:</p>
+<h5>Content Moderation</h5>
+<p>We use OpenAI’s <a href="https://platform.openai.com/docs/guides/moderation"><b>free</b></a> moderation API to filter out inappropriate or harmful queries. If flagged, the bot responds: “I'm sorry, I cannot provide that information.”</p>
+<h5>Query Transformation</h5>
+<p>We refine the query by:
+Fixing grammatical errors
+Adjusting context (e.g., reframing school voucher queries)
+Expanding the query to improve retrieval quality
+Once processed, the query is sent to Weaviate for hybrid search, which returns relevant results with search scores for each chunk.</p>
+<h4>Post retrieval</h4>
+<h5>Recency Adjustment</h5>
+<p>To prioritize newer content, we fuse hybrid search scores with recency scores, ensuring fresh articles rank higher. Since Weaviate didn’t have a built-in date-based re-ranking method at the time, I implemented our own. (If you find an existing solution, email me!)</p>
+<h5>Reranking</h5>
+<p>Finally, we perform reranking to further improve retrieval quality. And yes we are still doing search, i.e., retrievals. Using Cohere Rerank, we rank them based on relevance and send a limited set of chunks for response generation. This approach prevents feeding irrelevant chunks to the LLM, which reduces costs and increases accuracy. For more on reranking, check out <a href="https://docs.cohere.com/reference/rerank">cohere</a>, <a href="https://cookbook.openai.com/examples/search_reranking_with_cross-encoders">openai</a>, <a href="https://www.pinecone.io/learn/series/rag/rerankers/">pinecone</a>, and <a href="https://weaviate.io/blog/cross-encoders-as-reranker#cross-encoder-models">weaviate</a>.</p>
+<h4>Generation</h4>
+<p>After experimenting with different GPT models, we settled on GPT-4.0. Here’s how we optimized our prompts:
+Focus on relevant article chunks (especially recent ones)
+Prevent hallucinations (If no relevant data is found, do not generate an answer)
+Ensure conciseness, readability, and proper citation formatting
+One key improvement during the response generation phase was enabling streaming, which significantly reduced latency and improved user experience. Instead of waiting for a full response, users see answers appear in real time.</p>
+<h4>Frontend</h4>
+<p>This aspect of the project deserves its own blog post, especially given the contributions from our frontend developer. We built the frontend using Streamlit. Some key aspects involved making it visually similar to The Texas Tribune, citation visualization, streaming responses for a seamless user experience, and  progress bars.</p>
+</details>
+<h2>Testing and Deployment</h2>
+<p>We followed standard software development practices, maintaining both testing and production environments. For chatbot testing, we conducted thorough design, product, and editorial reviews, incorporating feedback from past iterations to enhance reliability and usability.
+To evaluate chatbot responses, our editors and journalists played a key role in assessing accuracy and effectiveness. We also used <a href="https://docs.ragas.io/en/stable/">RAGAS</a> to systematically evaluate the chatbot’s performance. Given the novelty of this technology and process, it was a learning experience for all involved.
+The chatbot was successfully deployed on the same day we launched the special report.</p>
+<h2>User Feedback and Insights</h2>
+<p>The chatbot performed well, receiving a wide range of user feedback. A common theme was that it provided detailed and helpful answers, making it particularly valuable for users seeking in-depth information.
+One of the most significant benefits was identifying questions the chatbot couldn’t answer, giving us insight into the unmet needs of Texans. This data will help us refine our coverage and better serve our audience.
+Since the chatbot was launched recently, we haven’t conducted a deep analysis yet. However, we’ve observed a clear trend—when we integrate the chatbot into newly published relevant stories, its usage increases.</p>
+<h2>Challenges and Lessons learned</h2>
+<h3>Challenges</h3>
+<p>One of the biggest challenges was navigating new technology while learning and building alongside our team. Developing and launching the chatbot required various iterations and problem-solving. Another major hurdle was evaluating chatbot responses. While many open-source evaluation tools exist, they are not yet fully optimized, making the process time-consuming and resource-intensive. Effective evaluations require input from journalists and editors—who already have heavy workloads—which adds another layer of complexity. Additionally, the stochastic nature of LLMs makes it difficult to establish a perfect evaluation set, as writing styles are inherently subjective.</p>
+<h3>Lessons Learned</h3>
+<h4>Lesson 1: Prioritize Recency</h4>
+<p>For news-oriented chatbots, recency is critical—so plan for it early. Check whether your vector database offers recency-based ranking as a built-in feature, and if not, consider implementing a custom solution. Additionally, factor recency awareness into prompt engineering to ensure the chatbot prioritizes the most up-to-date and relevant information.</p>
+<h4>Lesson 2: Invest in a Strong Evaluation Set</h4>
+<p>If you want to build a high-quality chatbot, start by developing a solid evaluation set. This set could integrate your organization’s writing style, content priorities, and domain-specific nuances. Finally, build your own set of data, in this case - news articles, alongside the evaluation set. A tailored evaluation set ensures that your chatbot aligns with your goals and consistently delivers reliable responses. Keep in mind that while the evaluation set may vary based on the chatbot’s purpose, its core structure should remain largely consistent.</p>
+<h4>Lesson 3: Build Your Evaluation Set Over Time</h4>
+<p>Evaluation during pre-deployment tasks is a resource intensive process. Thanks to a new <a href="https://www.linkedin.com/posts/shahules_how-to-curate-test-data-for-evaluating-llm-activity-7290439827609554972-polB/">approach</a>, post-deployment evaluation (see <a href="https://arxiv.org/abs/2501.13480">Adaptive Testing for LLM-Based Applications</a>). Post-deployment, real-world user queries become a valuable resource for improving and refining your chatbot. By saving these questions, you can gradually expand and enhance your evaluation set, thus your chatbot’s response.
+By incorporating these lessons, we can build more accurate, reliable, and scalable chatbots while continuously improving their ability to serve users effectively.</p>
+<p>Future Improvements
+Looking ahead, there are several enhancements we could make to improve the chatbot’s functionality and user experience
+Conversation Memory: Enable the bot to remember session-based interactions.
+Voice Features: Voice features are relatively inexpensive to integrate, yet they could significantly enhance accessibility and engagement.
+Expand Access: Extending the chatbot’s availability to SMS or other channels would make it even more accessible.</p>
+<p>Conclusion</p>
+<p>Building a chatbot is one of the most user-facing applications of LLMs, but a lot of it is about search and evaluation! A successful chatbot requires collaboration across teams—journalists, designers, editors, and engineers—each playing a crucial role in shaping its effectiveness.
+Beyond improving accessibility and engagement, chatbots represent just one way we can leverage this technology. Experimentation, iteration, and adaptability are key to refining these systems. With off-the-shelf solutions and increasingly powerful models, we now have more tools than ever to enhance and scale our work.
+Ultimately, while chatbots are one of the most intuitive and visible applications of LLMs, their potential goes far beyond conversation. These technologies open doors to new processes and innovations, empowering us to build even greater things.</p>
+<p><i>Thank you to Ashley Hebler, Darla Cameron, Ryan, AMC, and Jaden for helping me throughout the process. And thank you to all the users who were willing to test and provided feedback!</i></p>
+<p>Any questions, suggestions, or feedback: Please use this <a href="https://airtable.com/appFeleeKVUN0Iytx/pagYrV22o3gxt6Vtl/form">feedback form</a> or email me at suraj.thapa@texastribune.org</p>
+
+    </div>
+  </article>
+</main>
+
+<nav aria-label="pagination" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
+  <div class="post-nav">
+  </div>
+  <div class="post-nav">
+      <a href="/eng_posts/2024-09-24/">
+        <p class="has-text-teal">Previous Post →</p>
+      </a>
+    
+  </div>
+</nav>
+
+            </div>
+            <footer id="main-footer" class="has-bg-black-off has-xs-padding">
+    <div class="c-icon c-icon--yellow" style="font-size: 4rem">
+        <svg viewBox="0 0 174.9 200" ><path d="M0 0v200l40.2-25.1h134.6V0H0zm125.2 139.7l-38.3-25.2-38.3 25.2 12.1-44.2L25 66.8l45.8-2.1L87 21.8l16.2 42.9 45.8 2.1-35.8 28.6 12 44.3z"></path></svg>
+    </div>
+</footer>
+
+        </div>
+    </body>
+</html>
