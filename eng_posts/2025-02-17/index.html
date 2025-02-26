@@ -155,6 +155,8 @@ One key improvement during the response generation phase was enabling streaming,
 <h4>Frontend</h4>
 <p>This aspect of the project deserves its own blog post, especially given the contributions from our frontend developer. We built the frontend using Streamlit. Some key aspects involved making it visually similar to The Texas Tribune, citation visualization, streaming responses for a seamless user experience, and  progress bars.</p>
 </details>
+<h2>What it cannot answer?</h2>
+<p>The school voucher bot is designed exclusively to answer questions about school vouchers using a curated set of vetted articles. Thus, it cannot provide responses on topics outside this scope which are beyond its knowledge base. If a question falls outside its coverage, the chatbot will simply state as follow: <i>This tool relies on voucher stories published by The Texas Tribune. Apologies, we couldn't answer your question at this time. We'll forward it to our editorial team for review. In the meantime, you can visit texastribune.org to explore more.</i></p>
 <h2>Testing and Deployment</h2>
 <p>We followed standard software development practices, maintaining both testing and production environments. For chatbot testing, we conducted thorough design, product, and editorial reviews, incorporating feedback from past iterations to enhance reliability and usability.
 To evaluate chatbot responses, our editors and journalists played a key role in assessing accuracy and effectiveness. We also used <a href="https://docs.ragas.io/en/stable/" target="_blank" rel="noopener">RAGAS</a> to systematically evaluate the chatbot’s performance. Given the novelty of this technology and process, it was a learning experience for all involved.
@@ -174,16 +176,18 @@ Since the chatbot was launched recently, we haven’t conducted a deep analysis 
 <h4>Lesson 3: Build Your Evaluation Set Over Time</h4>
 <p>Evaluation during pre-deployment tasks is a resource intensive process. Thanks to a new <a href="https://www.linkedin.com/posts/shahules_how-to-curate-test-data-for-evaluating-llm-activity-7290439827609554972-polB/" target="_blank" rel="noopener">approach</a>, post-deployment evaluation (see <a href="https://arxiv.org/abs/2501.13480" target="_blank" rel="noopener">Adaptive Testing for LLM-Based Applications</a>). Post-deployment, real-world user queries become a valuable resource for improving and refining your chatbot. By saving these questions, you can gradually expand and enhance your evaluation set, thus your chatbot’s response.
 By incorporating these lessons, we can build more accurate, reliable, and scalable chatbots while continuously improving their ability to serve users effectively.</p>
-<p>Future Improvements
-Looking ahead, there are several enhancements we could make to improve the chatbot’s functionality and user experience
-Conversation Memory: Enable the bot to remember session-based interactions.
-Voice Features: Voice features are relatively inexpensive to integrate, yet they could significantly enhance accessibility and engagement.
-Expand Access: Extending the chatbot’s availability to SMS or other channels would make it even more accessible.</p>
-<p>Conclusion</p>
+<h3>Future Improvements</h3>
+<p>Looking ahead, there are several enhancements we could make to improve the chatbot’s functionality and user experience</p>
+<ul>
+<li>Conversation Memory: Enable the bot to remember session-based interactions.</li>
+<li>Voice Features: Voice features are relatively inexpensive to integrate, yet they could significantly enhance accessibility and engagement.</li>
+<li>Expand Access: Extending the chatbot’s availability to SMS or other channels would make it even more accessible.</li>
+</ul>
+<h3>Conclusion</h3>
 <p>Building a chatbot is one of the most user-facing applications of LLMs, but a lot of it is about search and evaluation! A successful chatbot requires collaboration across teams—journalists, designers, editors, and engineers—each playing a crucial role in shaping its effectiveness.
 Beyond improving accessibility and engagement, chatbots represent just one way we can leverage this technology. Experimentation, iteration, and adaptability are key to refining these systems. With off-the-shelf solutions and increasingly powerful models, we now have more tools than ever to enhance and scale our work.
 Ultimately, while chatbots are one of the most intuitive and visible applications of LLMs, their potential goes far beyond conversation. These technologies open doors to new processes and innovations, empowering us to build even greater things.</p>
-<p><i>Thank you to Ashley Hebler, Darla Cameron, Ryan, AMC, and Jaden for helping me throughout the process. And thank you to all the users who were willing to test and provided feedback!</i></p>
+<p><i>Thank you to Ashley Hebler, Darla Cameron, Ryan, <a href="https://www.texastribune.org/about/staff/alejandro-martinez-cabrera/" target="_blank" rel="noopener"> Alejandro Martínez-Cabrera</a> and <a href="https://www.texastribune.org/about/staff/jaden-edison/" target="_blank" rel="noopener">Jaden Edison</a> for helping me throughout the process. And thank you to all the users who were willing to test and provided feedback!</i></p>
 <p>Any questions, suggestions, or feedback: Please use this <a href="https://airtable.com/appFeleeKVUN0Iytx/pagYrV22o3gxt6Vtl/form)" target="_blank" rel="noopener">feedback form</a> or email me at suraj.thapa@texastribune.org</p>
 
     </div>
