@@ -265,7 +265,7 @@ main {
 
   &__title, &__description, &__byline {
     padding-bottom:20px;
-    width:auto;
+    width:50%;
     margin:auto;
     text-align: center;
 
@@ -275,17 +275,7 @@ main {
     }
   }
 
-  &__byline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    
-    .t-byline__item {
-      white-space: nowrap;
-    }
-  }
+
   &__image > img {
     display: block;
     margin: auto;
