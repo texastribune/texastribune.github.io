@@ -267,6 +267,7 @@ main {
     padding-bottom:20px;
     width:50%;
     margin:auto;
+    text-align: center;
 
     @include mq($until: bp-m) {
       width:70%;
