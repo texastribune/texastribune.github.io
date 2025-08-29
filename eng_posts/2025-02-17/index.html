@@ -111,7 +111,7 @@
 Before retrieving answers, we filter out harmful or inappropriate questions using OpenAI’s moderation API and refine user queries for better results. We used cohere to further re-rank retrieved data to prioritize the most useful article chunk. For generation, we use GPT-4.0, fine-tuned to focus on relevant content, avoid incorrect answers, and provide clear, well-cited responses. The frontend, built with Streamlit, ensures a smooth user experience with real-time streaming, citation visualization, and a user-friendly interface.</p>
 <h3>Technical explanation (optional)</h3>
 <details>
-<summary>Click to open</summary>
+<summary>Read more ⬍</summary>
 <br>
 <h4>Data Engineering</h4>
 <p>We refined our data pipeline through multiple iterations, ultimately structuring it around tag-based ingestion. Whenever a relevant article is tagged, it is added to the bot’s knowledge base. Additionally, if an article is updated, the ingestion pipeline ensures the knowledge base reflects the latest version.
@@ -196,6 +196,10 @@ Ultimately, while chatbots are one of the most intuitive and visible application
 
 <nav aria-label="pagination" class="post-nav-container t-links t-uppercase t-lsp-b t-size-xs t-align-center t-weight-bold">
   <div class="post-nav">
+    <a href="/eng_posts/2025-08-29/">
+      <p class="has-text-teal">← Next Post</p>
+    </a>
+    
   </div>
   <div class="post-nav">
       <a href="/eng_posts/2024-09-24/">
@@ -213,5 +217,6 @@ Ultimately, while chatbots are one of the most intuitive and visible application
 </footer>
 
         </div>
+        <script src=/assets/main.js></script>
     </body>
 </html>

@@ -2712,14 +2712,25 @@ main h2 {
 }
 .post__title, .post__description, .post__byline {
   padding-bottom: 20px;
-  width: 50%;
+  width: auto;
   margin: auto;
+  text-align: center;
 }
 @media (max-width: 40.615em) {
   .post__title, .post__description, .post__byline {
     width: 70%;
     margin: auto;
   }
+}
+.post__byline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.post__byline .t-byline__item {
+  white-space: nowrap;
 }
 .post__image > img {
   display: block;
