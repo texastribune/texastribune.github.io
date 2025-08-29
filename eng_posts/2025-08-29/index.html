@@ -136,12 +136,7 @@ How it works:
 <p>We apply post-processing and filtering to handle edge cases that arise from the nondeterministic behavior of LLMs.</p>
 <h2>How did we decide this was the best approach?</h2>
 <p>Our approach was highly iterative and driven entirely by metrics. I used MLflow as the central stack for tracking metrics, which allowed us to systematically evaluate different methods with the goal of achieving over 90% in precision, accuracy, and recall.
-Here are some of the approaches we experimented with:
-- Extracting entities using alternative models such as spaCy
-- Testing different n-gram combinations
-- Applying fuzzy search with existing names
-- Adjusting cosine similarity thresholds
-- Designing and refining LLM prompts
+Here are some of the approaches we experimented with: (1) Extracting entities using alternative models such as spaCy, (2) Testing different n-gram combinations, (3) Applying fuzzy search with existing names, (4) Adjusting cosine similarity thresholds, and (5) Designing and refining LLM prompts.
 By leveraging MLflow for detailed metric tracking, we were able to compare approaches effectively and select the solution that best met our requirements. This iterative process proved invaluable in optimizing our results.</p>
 <h2>Performance Optimizations</h2>
 <ol>

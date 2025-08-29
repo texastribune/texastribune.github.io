@@ -2712,7 +2712,7 @@ main h2 {
 }
 .post__title, .post__description, .post__byline {
   padding-bottom: 20px;
-  width: auto;
+  width: 50%;
   margin: auto;
   text-align: center;
 }
@@ -2721,16 +2721,6 @@ main h2 {
     width: 70%;
     margin: auto;
   }
-}
-.post__byline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.post__byline .t-byline__item {
-  white-space: nowrap;
 }
 .post__image > img {
   display: block;
