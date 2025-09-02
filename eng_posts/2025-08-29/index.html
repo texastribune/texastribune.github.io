@@ -107,22 +107,24 @@ Our search tool failed when text variations broke our regex-based approach. We r
 </ul>
 <h2>How the Sponsor Detection System Works</h2>
 <h3>Overview</h3>
-<p>Our new sponsor detection system uses AI to identify sponsor mentions in articles through Named Entity Recognition, semantic embeddings, and similarity matching. The system is designed to detect sponsors when articles mention those organizations and individuals, helping with disclosure requirements.
-How it works:
-- We extract the sponsors from the stories using OpenAI’s LLM
-- We cross match against those extracted sponsors with the existing sponsors in our sponsor list
-<i> Takeaway: </i> Our new sponsor detection system leverages LLM technologies' extraction capabilities and advanced search through cosine similarity, moving away from traditional ML approaches.</p>
+<p>Our new sponsor detection system uses AI to identify sponsor mentions in articles through Named Entity Recognition, semantic embeddings, and similarity matching. The system is designed to detect sponsors when articles mention those organizations and individuals, helping with disclosure requirements.</p>
+<p><b>How does it work?</b></p>
+<ul>
+<li>We extract the sponsors from the stories using OpenAI’s LLM</li>
+<li>We cross match against those extracted sponsors with the existing sponsors in our sponsor list</li>
+</ul>
+<p><i> Takeaway: </i> Our new sponsor detection system leverages LLM technologies' extraction capabilities and advanced search through cosine similarity, moving away from traditional ML approaches.</p>
 <h2>Engineering deep dive</h2>
 <details>
 <summary>Read more ⬍</summary>
 <h2>Architecture Overview</h2>
 <p>The system follows a multi-stage pipeline:</p>
 <ol>
-<li><strong>Text Processing &amp; Chunking</strong></li>
-<li><strong>Named Entity Recognition (NER)</strong></li>
-<li><strong>Semantic Embedding Generation</strong></li>
-<li><strong>Similarity Matching</strong></li>
-<li><strong>Post-processing &amp; Filtering</strong></li>
+<li>Text Processing &amp; Chunking</li>
+<li>Named Entity Recognition (NER)</li>
+<li>Semantic Embedding Generation</li>
+<li>Similarity Matching</li>
+<li>Post-processing &amp; Filtering</li>
 </ol>
 <h3>1. Text Processing &amp; Chunking</h3>
 <p>The system first processes incoming text through intelligent chunking by configuring chunk size. This is to handle the long articles that exceed OpenAI's token limits.</p>
